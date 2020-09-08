@@ -3,18 +3,18 @@
 @section('title','Welcome to Doctor on call')
 
 @section('content')
-    <header class="flex flex-wrap bg-blue-base lg:px-20 md:px-16 px-10" style="height: 100vh">
-        <div class="lg:w-1/2 md:w-1/2 w-full lg:py-24 md:py-20 py-10">
-            <h3 class="text-h2 text-blue font-bold" style="width:80%">Virtual Health care for your family’s health</h3>
-            <div class="my-10">
-                <button class="bg-blue text-white rounded-full py-4 text-medium px-8">Book an appointment</button>
+    <header class="flex flex-wrap bg-blue-base lg:px-20 md:px-16 px-10 height">
+        <div class="lg:w-1/2 md:w-1/2 w-full lg:py-24 md:py-10 py-10">
+            <h3 class="lg:text-h3 md:text-h3 text-h4 text-blue font-bold" style="width:80%">Virtual Health care for your family’s health</h3>
+            <div class="mt-10">
+                <button class="bg-blue text-white rounded-full py-4 text-medium px-8" @click="show = true">Book an appointment</button>
             </div>
         </div>
         <div class="lg:w-1/2 md:w-1/2 w-full lg:flex md:flex hidden">
             <img src="{{ asset('images/doctor.svg') }}" alt="header-bg">
         </div>
     </header>
-    <section class="lg:mx-32 md:mx-16 mx-3 -mt-20 mb-10">
+    <section class="lg:mx-32 md:mx-16 mx-3 lg:-mt-16 md:-mt-16  mb-10">
         <div class="flex flex-wrap">
             <div class="lg:w-1/2 md:w-1/2 w-full bg-white rounded-lg p-16 shadow mb-4">
                 <p class="pl-2 py-1 bg-blue-base text-blue text-medium">Meet our awesome community</p>
@@ -80,4 +80,10 @@
             </div>
         </div>
     </section>
+    <vodal :show="show" animation="rotate" :width="600" :height="550" @hide="show = false">
+        <div class="p-5">
+            <h3 class="font-bold text-blue text-large">Please provide your details below</h3>
+            <p class="my-2 text-medium"><span class="font-bold">NOTE</span>: This information will be used to create an account for you inorder to have a section with the Doctor.</p>
+        </div>
+    </vodal>
 @endsection

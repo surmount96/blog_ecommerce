@@ -17645,6 +17645,16 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.height {
+  height: 100vh;
+}
+
+@media screen and (max-width: 760px) {
+  .height {
+    height: 60vh;
+  }
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

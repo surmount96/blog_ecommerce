@@ -24,7 +24,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "remixicon": "^2.5.0",
         "tailwindcss": "^1.7.3",
-        "tailwindcss-gradients": "^3.0.0"
+        "tailwindcss-gradients": "^3.0.0",
+        "vodal": "^2.4.0"
     }
 }
