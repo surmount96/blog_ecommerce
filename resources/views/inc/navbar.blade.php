@@ -10,6 +10,7 @@
         <li class="px-6"><a href="#">Service</a></li>
         <li class="px-6"><a href="#">About</a></li>
         <li class="pl-6"><a href="">Contact</a></li>
+        <li class="pl-6"><a href="/register" class="bg-red text-white py-3 px-10 rounded">Register</a></li>
     </ul>
     <ul class="lg:hidden md:hidden flex">
         <li class="cursor-pointer" @click="">
