@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <a href="#" class="bg-red py-2 px-4 text-white" onclick="event.preventDefault();getElementById('logout').submit();">logout</a>
+                    <form action=" {{ route('logout') }}" id="logout" method="POST" style="display: none">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>

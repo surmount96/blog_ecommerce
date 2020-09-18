@@ -1,7 +1,7 @@
 <nav class="flex py-2 items-center justify-between bg-blue-base lg:px-20 md:px-16 px-10">
     <div class="">
         <a href="">
-            <img src="{{ asset('images/logo/logo3.png') }}" alt="logo" class="w-16">
+            <img src="{{ asset('images/logo/logo2.jpeg') }}" alt="logo" class="w-32">
         </a>
     </div>
     <ul class="lg:flex md:flex hidden text-body-2">

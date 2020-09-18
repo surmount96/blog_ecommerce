@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex flex-wrap">
-    <div class="lg:w-1/2 md:w-1/2 w-full lg:py-40 md:py-24 px-20 py-32 lg:px-24 md:px-20 px-10 " style="height:100vh">
+    <div class="lg:w-1/2 md:w-1/2 w-full lg:py-32 md:py-24 px-20 py-32 lg:px-24 md:px-20 px-10 " style="height:100vh">
         <div class="text-blue text-h3 font-semibold text-center">{{ __('Create an account') }}</div>
         <p class="text-gray-dark mb-5 text-medium text-center">
             Already have an account?
@@ -43,12 +43,12 @@
 
             <div class="w-full mb-5 relative">
                 <div class="mr-2">
-                    <input type="password" placeholder="*********" class="placeholder:text-medium placeholder:pt-6 text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-lg @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
+                    <input type="password" placeholder="password" class="placeholder:text-medium placeholder:pt-6 text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-lg @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
                     <div class="absolute top-0 left-0 ml-4" style="margin-top: .65rem">
                         <i class="ri-lock-line ri-fw text-gray-100"></i>
                     </div>
                     <div class="absolute top-0 right-0 mr-4" style="margin-top: .65rem">
-                        <i class="ri-eye-off-line ri-fw text-gray-100"></i>
+                        <i class="ri-eye-line ri-fw text-gray-100"></i>
                     </div>
                     @if($errors->has('password'))
                         <span class="text-red" role="alert">
@@ -57,13 +57,30 @@
                     @endif
                 </div>
             </div>
-            <div class="w-full mb-5 flex ">
+
+            <div class="w-full mb-5 relative">
+                <div class="mr-2">
+                    <input type="password" placeholder="confirm password" class="placeholder:text-medium placeholder:pt-6 text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-lg" name="password_confirmation" required autocomplete="new-password" autofocus>
+                    <div class="absolute top-0 left-0 ml-4" style="margin-top: .65rem">
+                        <i class="ri-lock-line ri-fw text-gray-100"></i>
+                    </div>
+                    <div class="absolute top-0 right-0 mr-4" style="margin-top: .65rem">
+                        <i class="ri-eye-line ri-fw text-gray-100"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mb-5 flex items-center">
                
-               <div class="">
+               <div class="flex items-center">
                     <input type="checkbox" name="password" requiredautofocus>
+                    <label for="" class="text-medium ml-3"">
+                        I've read and agree with Terms of Service and our 
+                        <a href="#" class="text-blue">Privacy policy</a>
+                    </label>
                </div>
                <div class="text-medium ml-3">
-                   <p>I've read and agree with Terms of Service and our Privacy policy</p>
+                   
                </div>
                     
                 

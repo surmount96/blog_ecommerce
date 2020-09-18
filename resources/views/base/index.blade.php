@@ -10,8 +10,8 @@
                 <button class="bg-blue text-white rounded-full py-4 text-medium px-8" @click="show = true">Book an appointment</button>
             </div>
         </div>
-        <div class="lg:w-1/2 md:w-1/2 w-full lg:flex md:flex hidden">
-            <img src="{{ asset('images/doctor.svg') }}" alt="header-bg">
+        <div class="lg:w-1/2 md:w-1/2 w-full lg:flex md:flex lg:py-20 hidden">
+            <img src="{{ asset('images/front.svg') }}" alt="header-bg">
         </div>
     </header>
     <section class="lg:mx-32 md:mx-16 mx-3 lg:-mt-16 md:-mt-16  mb-10">
