@@ -73,8 +73,8 @@
             <div class="w-full mb-5 flex items-center">
                
                <div class="flex items-center">
-                    <input type="checkbox" name="password" requiredautofocus>
-                    <label for="" class="text-medium ml-3"">
+                    <input id="privacy" type="checkbox" name="privacy" requiredautofocus>
+                    <label for="privacy" class="text-medium ml-3"">
                         I've read and agree with Terms of Service and our 
                         <a href="#" class="text-blue">Privacy policy</a>
                     </label>
