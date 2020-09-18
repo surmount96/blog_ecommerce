@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        {{-- @include('inc.navbar') --}}
+        @include('inc.navbar')
         <main class="">
             @yield('content')
         </main>
