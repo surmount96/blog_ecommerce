@@ -86,7 +86,7 @@
                 
             </div>
 
-            <button type="submit" class="bg-orange text-white py-3 px-4 w-full">Register</button>
+            <button type="submit" class="bg-orange text-medium text-white py-3 px-4 w-full">Register</button>
         </form>
     </div>
     <div class="lg:w-1/2 md:w-1/2 w-full lg:flex md:flex hidden" style="height:100vh">

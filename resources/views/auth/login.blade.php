@@ -39,7 +39,7 @@
                 <a href="/register" class="text-blue underline">signup</a>
             </p>
 
-            <button class="bg-orange text-white py-3 px-4 w-full" type="submit">login</button>
+            <button class="bg-orange text-white py-3 px-4 w-full text-medium" type="submit">login</button>
         </form>
     </div>
 
