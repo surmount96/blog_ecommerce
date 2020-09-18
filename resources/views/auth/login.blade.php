@@ -25,6 +25,9 @@
                 <div class="absolute top-0 left-0 ml-4" style="margin-top: .65rem">
                     <i class="ri-lock-line ri-fw text-gray-100"></i>
                 </div>
+                <div class="absolute top-0 right-0 mr-4" style="margin-top: .65rem">
+                    <i class="ri-eye-off-line ri-fw text-gray-100"></i>
+                </div>
                 @if($errors->has('password'))
                     <span class="text-red" role="alert">
                         {{ $errors->first('password') }}
