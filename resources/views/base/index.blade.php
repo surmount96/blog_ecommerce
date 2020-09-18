@@ -139,7 +139,7 @@
             <div class=" my-3 lg:mx-5 md:mx-5 mx-4 relative">
                 <input id="date" type="date" placeholder="Date" class="text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-sm" name="date" required autocomplete="date" autofocus>
                 <div class="absolute top-0 left-0 ml-4" style="margin-top: .86rem">
-                    <i class="ri-user-line ri-fw text-gray-100"></i>
+                    <i class="ri-calendar-line ri-fw text-gray-100"></i>
                 </div>
                 @if($errors->has('date'))
                     <span class="text-red" role="alert">
