@@ -144,8 +144,14 @@
             </div>
         </div>
         <div class="lg:w-2/5 md:w-2/5 sm:w-1/2 w-full mb-4">
-            <div class="bg-gray h-32 p-5" style="width:70%">
+            <div class="bg-gray p-5" style="width:70%">
                 <h3 class="font-bold text-h4">Stay informed</h3>
+                <p class="text-medium font-light">
+                    ipsum dolor sit amet consectetur adipisicing elit. Et culpa sint optio sit qui exercitationem repellat dignissimos? Voluptatem rerum quaerat suscipit consequatur 
+                </p>
+                <div class="mt-6">
+                    <button type="submit" class="bg-orange text-white py-3 px-4 w-full text-medium">submit</button>
+                </div>
             </div>
             
         </div>
