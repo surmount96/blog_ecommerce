@@ -39,3 +39,7 @@ Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+    Route::get('{any}', 'HomeController@index');
+});

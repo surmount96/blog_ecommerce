@@ -9,32 +9,32 @@
                 Analytics
             </a>
         </div>
-        <div class=" mt-4 ml-10">
-            <a href="/user/wallet" class="flex items-center text-body-2 {{ Request::is('user/wallet') ? 'text-orange' : '' }}">
+        <div class=" mt-8 ml-10">
+            <a href="/dashboard/products" class="flex items-center text-body-2 {{ Request::is('dashboard/products') ? 'text-orange' : '' }}">
                 <i class="ri-shopping-cart-2-line mr-2 ri-fw"></i>
                 Cart
             </a>
         </div>
-        <div class=" mt-4 ml-10">
-            <a href="/user/conversation" class="flex items-center text-body-2 {{ Request::is('user/conversation') ? 'text-orange' : '' }}">
+        <div class=" mt-8 ml-10">
+            <a href="/dashboard/consultancy" class="flex items-center text-body-2 {{ Request::is('dashboard/consultancy') ? 'text-orange' : '' }}">
                 <i class="ri-chat-1-line mr-2 ri-fw"></i>
                 Consultancy
             </a>
         </div>
-        <div class=" mt-4 ml-10">
-            <a href="/user/profile" class="flex items-center text-body-2 {{ Request::is('user/profile') ? 'text-orange' : '' }}">
+        <div class=" mt-8 ml-10">
+            <a href="/dashboard/profile" class="flex items-center text-body-2 {{ Request::is('dashboard/profile') ? 'text-orange' : '' }}">
                 <i class="ri-profile-line mr-2 ri-fw"></i>
                 Your Profile
             </a>
         </div>
-        <div class=" mt-4 ml-10">
-            <a href="/user/settings" class="flex items-center text-body-2 {{ Request::is('user/settings') ? 'text-orange' : '' }}">
+        <div class=" mt-8 ml-10">
+            <a href="/dashboard/settings" class="flex items-center text-body-2 {{ Request::is('dashboard/settings') ? 'text-orange' : '' }}">
                 <i class="ri-settings-3-line mr-2 ri-fw"></i>
                 Settings
             </a>
         </div>
-        <div class=" mt-4 ml-10">
-            <a href="#" class="flex items-center text-body-2 {{ Request::is('user/settings') ? 'text-orange' : '' }}" onclick="event.preventDefault(); document.getElementById('logout').submit();">
+        <div class=" mt-8 ml-10">
+            <a href="#" class="flex items-center text-body-2" onclick="event.preventDefault(); document.getElementById('logout').submit();">
                 <i class="ri-logout-box-line mr-2 ri-fw"></i>
                 Logout
             </a>
