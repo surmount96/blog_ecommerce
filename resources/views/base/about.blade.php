@@ -18,7 +18,7 @@
                 </button>
             </div>
         </div>
-        <div class="lg:w-1/2 md:w-1/2 sm:w-1/2 w-full" style="background-image: url('{{ asset('images/lady.jpg') }}'); background-size:cover; background-position:center;background-repeat:no-repeat;height: 60vh;filter:grayscale(2)">
+        <div class="lg:w-1/2 md:w-1/2 sm:w-1/2 w-full" style="background-image: url('{{ asset('images/lady.jpg') }}'); background-size:cover; background-position:center;background-repeat:no-repeat;height: 75vh;filter:grayscale(2)">
         </div>
     </header>
 @endsection
