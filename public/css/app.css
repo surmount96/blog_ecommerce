@@ -1181,7 +1181,9 @@ video {
 }
 
 .divide-gray-100 > :not(template) ~ :not(template){
-  border-color: #ccccc;
+  --divide-opacity: 1;
+  border-color: #f9f9f9;
+  border-color: rgba(249, 249, 249, var(--divide-opacity));
 }
 
 .divide-gray > :not(template) ~ :not(template){
@@ -4806,7 +4808,9 @@ video {
 }
 
 .border-gray-100{
-  border-color: #ccccc;
+  --border-opacity: 1;
+  border-color: #f9f9f9;
+  border-color: rgba(249, 249, 249, var(--border-opacity));
 }
 
 .border-gray{
@@ -4844,7 +4848,9 @@ video {
 }
 
 .hover\:border-gray-100:hover{
-  border-color: #ccccc;
+  --border-opacity: 1;
+  border-color: #f9f9f9;
+  border-color: rgba(249, 249, 249, var(--border-opacity));
 }
 
 .hover\:border-gray:hover{
@@ -4882,7 +4888,9 @@ video {
 }
 
 .focus\:border-gray-100:focus{
-  border-color: #ccccc;
+  --border-opacity: 1;
+  border-color: #f9f9f9;
+  border-color: rgba(249, 249, 249, var(--border-opacity));
 }
 
 .focus\:border-gray:focus{
@@ -18247,7 +18255,9 @@ body {
   }
 
   .sm\:divide-gray-100 > :not(template) ~ :not(template){
-    border-color: #ccccc;
+    --divide-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--divide-opacity));
   }
 
   .sm\:divide-gray > :not(template) ~ :not(template){
@@ -21872,7 +21882,9 @@ body {
   }
 
   .sm\:border-gray-100{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .sm\:border-gray{
@@ -21910,7 +21922,9 @@ body {
   }
 
   .sm\:hover\:border-gray-100:hover{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .sm\:hover\:border-gray:hover{
@@ -21948,7 +21962,9 @@ body {
   }
 
   .sm\:focus\:border-gray-100:focus{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .sm\:focus\:border-gray:focus{
@@ -35230,7 +35246,9 @@ body {
   }
 
   .md\:divide-gray-100 > :not(template) ~ :not(template){
-    border-color: #ccccc;
+    --divide-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--divide-opacity));
   }
 
   .md\:divide-gray > :not(template) ~ :not(template){
@@ -38855,7 +38873,9 @@ body {
   }
 
   .md\:border-gray-100{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .md\:border-gray{
@@ -38893,7 +38913,9 @@ body {
   }
 
   .md\:hover\:border-gray-100:hover{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .md\:hover\:border-gray:hover{
@@ -38931,7 +38953,9 @@ body {
   }
 
   .md\:focus\:border-gray-100:focus{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .md\:focus\:border-gray:focus{
@@ -52213,7 +52237,9 @@ body {
   }
 
   .lg\:divide-gray-100 > :not(template) ~ :not(template){
-    border-color: #ccccc;
+    --divide-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--divide-opacity));
   }
 
   .lg\:divide-gray > :not(template) ~ :not(template){
@@ -55838,7 +55864,9 @@ body {
   }
 
   .lg\:border-gray-100{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .lg\:border-gray{
@@ -55876,7 +55904,9 @@ body {
   }
 
   .lg\:hover\:border-gray-100:hover{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .lg\:hover\:border-gray:hover{
@@ -55914,7 +55944,9 @@ body {
   }
 
   .lg\:focus\:border-gray-100:focus{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .lg\:focus\:border-gray:focus{
@@ -69196,7 +69228,9 @@ body {
   }
 
   .xl\:divide-gray-100 > :not(template) ~ :not(template){
-    border-color: #ccccc;
+    --divide-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--divide-opacity));
   }
 
   .xl\:divide-gray > :not(template) ~ :not(template){
@@ -72821,7 +72855,9 @@ body {
   }
 
   .xl\:border-gray-100{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .xl\:border-gray{
@@ -72859,7 +72895,9 @@ body {
   }
 
   .xl\:hover\:border-gray-100:hover{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .xl\:hover\:border-gray:hover{
@@ -72897,7 +72935,9 @@ body {
   }
 
   .xl\:focus\:border-gray-100:focus{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .xl\:focus\:border-gray:focus{
@@ -86179,7 +86219,9 @@ body {
   }
 
   .\32xl\:divide-gray-100 > :not(template) ~ :not(template){
-    border-color: #ccccc;
+    --divide-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--divide-opacity));
   }
 
   .\32xl\:divide-gray > :not(template) ~ :not(template){
@@ -89804,7 +89846,9 @@ body {
   }
 
   .\32xl\:border-gray-100{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .\32xl\:border-gray{
@@ -89842,7 +89886,9 @@ body {
   }
 
   .\32xl\:hover\:border-gray-100:hover{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .\32xl\:hover\:border-gray:hover{
@@ -89880,7 +89926,9 @@ body {
   }
 
   .\32xl\:focus\:border-gray-100:focus{
-    border-color: #ccccc;
+    --border-opacity: 1;
+    border-color: #f9f9f9;
+    border-color: rgba(249, 249, 249, var(--border-opacity));
   }
 
   .\32xl\:focus\:border-gray:focus{

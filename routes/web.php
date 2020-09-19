@@ -17,8 +17,20 @@ Route::get('/', function () {
     return view('base.index');
 });
 
-Route::get('/welcome', function () {
+Route::get('/services', function () {
     return view('welcome');
+});
+
+Route::view('/about', 'base.about');
+Route::view('/contact', 'base.contact');
+Route::view('/about', 'base.about');
+
+Route::get('/start-session', function () {
+    return view('dashboard.session');
+});
+
+Route::get('/blog', function () {
+    return view('base.blog');
 });
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');

@@ -140,7 +140,7 @@ module.exports = {
             default: theme('color.gray', 'currentColor'),
             gray: {
                 default: '#F1F1F1',
-                100: '#ccccc',
+                100: '#f9f9f9',
                 dark: '#00000',
             },
             blue: {

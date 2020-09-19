@@ -44,7 +44,7 @@
             <div class="w-full mb-5 relative">
                 <div class="mr-2">
                     <input type="password" placeholder="password" class="placeholder:text-medium placeholder:pt-6 text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-lg @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
-                    <div class="absolute top-0 left-0 ml-4" style="margin-top: .65rem">
+                    <div class="absolute top-0 left-0 ml-4" style="margin-top: .85rem">
                         <i class="ri-lock-line ri-fw text-gray-100"></i>
                     </div>
                     <div class="absolute top-0 right-0 mr-4" style="margin-top: .65rem">
@@ -61,7 +61,7 @@
             <div class="w-full mb-5 relative">
                 <div class="mr-2">
                     <input type="password" placeholder="confirm password" class="placeholder:text-medium placeholder:pt-6 text-medium bg-gray py-4 w-full pl-10 border-none focus:outline-none rounded-lg" name="password_confirmation" required autocomplete="new-password" autofocus>
-                    <div class="absolute top-0 left-0 ml-4" style="margin-top: .65rem">
+                    <div class="absolute top-0 left-0 ml-4" style="margin-top: .85rem">
                         <i class="ri-lock-line ri-fw text-gray-100"></i>
                     </div>
                     <div class="absolute top-0 right-0 mr-4" style="margin-top: .65rem">
@@ -74,7 +74,7 @@
                
                <div class="flex items-center">
                     <input id="privacy" type="checkbox" name="privacy" requiredautofocus>
-                    <label for="privacy" class="text-medium ml-3"">
+                    <label for="privacy" class="text-medium ml-3">
                         I've read and agree with Terms of Service and our 
                         <a href="#" class="text-blue">Privacy policy</a>
                     </label>

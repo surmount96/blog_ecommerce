@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Vodal from 'vodal';
+import ToggleButton from 'vue-js-toggle-button'
+ 
+Vue.use(ToggleButton)
 
 Vue.component(Vodal.name, Vodal);
 
@@ -37,7 +40,9 @@ const app = new Vue({
     el: '#front',
     data() {
         return {
-            show:false
+            show:false,
+            test:false,
+            age:true
         };
     },
 });
