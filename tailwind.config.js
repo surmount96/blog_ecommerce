@@ -119,6 +119,7 @@ module.exports = {
             default: '16px',
             large: '17px',
             medium: '.85rem',
+            small:'.65rem',
             'body-2': '15px',
             h1: '48px',
             h2: '40px',

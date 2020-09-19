@@ -5977,6 +5977,10 @@ video {
   font-size: .85rem;
 }
 
+.text-small{
+  font-size: .65rem;
+}
+
 .text-body-2{
   font-size: 15px;
 }
@@ -23051,6 +23055,10 @@ body {
     font-size: .85rem;
   }
 
+  .sm\:text-small{
+    font-size: .65rem;
+  }
+
   .sm\:text-body-2{
     font-size: 15px;
   }
@@ -40040,6 +40048,10 @@ body {
 
   .md\:text-medium{
     font-size: .85rem;
+  }
+
+  .md\:text-small{
+    font-size: .65rem;
   }
 
   .md\:text-body-2{
@@ -57033,6 +57045,10 @@ body {
     font-size: .85rem;
   }
 
+  .lg\:text-small{
+    font-size: .65rem;
+  }
+
   .lg\:text-body-2{
     font-size: 15px;
   }
@@ -74024,6 +74040,10 @@ body {
     font-size: .85rem;
   }
 
+  .xl\:text-small{
+    font-size: .65rem;
+  }
+
   .xl\:text-body-2{
     font-size: 15px;
   }
@@ -91013,6 +91033,10 @@ body {
 
   .\32xl\:text-medium{
     font-size: .85rem;
+  }
+
+  .\32xl\:text-small{
+    font-size: .65rem;
   }
 
   .\32xl\:text-body-2{

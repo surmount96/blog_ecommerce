@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/services', function () {
-    return view('welcome');
+    return view('base.service');
 });
 
 Route::view('/about', 'base.about');

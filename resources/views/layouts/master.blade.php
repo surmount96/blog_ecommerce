@@ -4,14 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title','Doctor on call')</title>
+        <title>@yield('title','Fummedicare')</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <style>
-            .wf-inter-n4-active{
-                font-family: 'Mulish', sans-serif!important;
-            }
-        </style>
+        
     </head>
     <body class="text-dark">
         <div id="front">
