@@ -27,7 +27,7 @@ Route::view('/about', 'base.about');
 
 Route::get('/start-session', function () {
     return view('dashboard.session');
-});
+})->middleware('auth');
 
 Route::get('/blog', function () {
     return view('base.blog');
@@ -38,4 +38,4 @@ Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');

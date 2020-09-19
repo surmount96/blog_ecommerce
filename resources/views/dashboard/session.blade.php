@@ -3,9 +3,14 @@
 @section('content')
 <div class="flex flex-wrap">
     <div class="lg:w-1/2 md:w-1/2 w-full lg:py-24 md:py-24 py-32 lg:px-12 md:px-12 px-10 relative" >
-        <div class="absolute top-0 right-0 mr-4 text-blue flex items-center" style="margin-top: .65rem">
-            <span class="text-medium">Logout</span>
-            <i class="ri-logout-box-line ri-fw"></i>
+        <div class="absolute top-0 right-0 mr-4 text-blue " style="margin-top: .65rem">
+            <a href="/logout" class="flex items-center" onclick="event.preventDefault(); document.getElementById('logout').submit();">
+                <span class="text-medium">Logout</span>
+                <i class="ri-logout-box-line ri-fw"></i>
+            </a>
+            <form action="{{ route('logout') }}" id="logout" class="hidden" method="POST">
+                @csrf
+            </form>
         </div>
         <div class="text-blue text-h4 font-bold mb-8 text-center">{{ __('Define your patient') }}</div>
         
@@ -87,7 +92,7 @@
                 </div>
             </div>
             <div class="w-32 mx-auto my-10">
-                <button class="bg-green text-white py-3 px-4 w-full rounded-full text-medium" type="submit">start</button>
+                <a href="/home" class="bg-green text-center text-white py-3 px-4 w-full rounded-full text-medium" type="submit">start</a>
             </div>
         </form>
     </div>
