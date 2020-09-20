@@ -10,7 +10,7 @@
         <li class="px-6"><a href="services">Service</a></li>
         <li class="px-6"><a href="/about">About</a></li>
         <li class="pl-6"><a href="/contact">Contact</a></li>
-        <li class="pl-6"><a href="/register" class="bg-orange text-medium text-white py-3 px-10">Register</a></li>
+        <li class="pl-6"><a href="/register" class="text-orange border border-orange hover:bg-orange hover:text-white text-medium py-2 px-6">Register</a></li>
     </ul>
     <ul class="lg:hidden md:hidden flex">
         <li class="cursor-pointer" @click="">
