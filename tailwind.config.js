@@ -19,6 +19,7 @@ module.exports = {
                 deeper: '#03045E',
                 pale: '#E8F7FF',
                 light: '#479BFF',
+                bright:'#004DFD',
             },
             yellow: {
                 default: '#FFC82C',
@@ -150,6 +151,7 @@ module.exports = {
             lightGrey: '#A6AAB4',
             orange: '#FF7310',
             green: '#5FCAAF',
+            yellow: '#FFC82C',
         }),
         fontFamily: {
             display: ['Gilroy', 'sans-serif'],
