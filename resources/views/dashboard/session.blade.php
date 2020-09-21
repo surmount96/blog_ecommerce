@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="w-32 mx-auto my-10">
-                <a href="/home" class="bg-green text-center text-white py-3 px-4 w-full rounded-full text-medium" type="submit">start</a>
+                <a href="/dashboard" class="bg-green text-center text-white py-3 px-4 w-full rounded-full text-medium" type="submit">start</a>
             </div>
         </form>
     </div>
