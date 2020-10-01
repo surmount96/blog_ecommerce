@@ -1,3 +1,6 @@
-<footer class="bg-blue h-64 mt">
+@if(request()->path() != 'shop')
+    <footer class="bg-blue h-64 mt">
 
-</footer>
+    </footer>
+
+@endif

@@ -33,6 +33,10 @@ Route::get('/blog', function () {
     return view('base.blog');
 });
 
+Route::get('/shop', function () {
+    return view('base.shop');
+});
+
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 

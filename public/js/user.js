@@ -19002,7 +19002,7 @@ var protectedRoutes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mac/Desktop/projects/hope/funmilayo/resources/js/auth.js */"./resources/js/auth.js");
+module.exports = __webpack_require__(/*! /Users/mac/Desktop/projects/funmilayo/resources/js/auth.js */"./resources/js/auth.js");
 
 
 /***/ })

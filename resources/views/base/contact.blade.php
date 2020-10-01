@@ -5,7 +5,7 @@
         <div class="flex flex-wrap">
             <div class="lg:w-2/4 md:w-2/4 sm:w-1/2 w-full lg:px-10 px-6  py-20 text-white">
                 <h3 class="text-h3">Contact Us</h3>
-                <p class="text-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et culpa sint optio sit qui exercitationem repellat dignissimos? Voluptatem rerum quaerat suscipit consequatur porro minima, commodi mollitia, animi adipisci veritatis laboriosam.</p>
+                <p class="text-medium leading-33">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et culpa sint optio sit qui exercitationem repellat dignissimos? Voluptatem rerum quaerat suscipit consequatur porro minima, commodi mollitia, animi adipisci veritatis laboriosam.</p>
             </div>
             <div class="lg:w-2/4 md:w-2/4 sm:w-1/2 w-full">
                 <div class="bg-white ml-16 p-6 rounded-lg mt-16 shadow-lg " style="width:60%; height:75vh;">

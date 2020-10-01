@@ -21,12 +21,12 @@
                 Consultancy
             </a>
         </div>
-        <div class=" mt-8 ml-10">
+        {{-- <div class=" mt-8 ml-10">
             <a href="/dashboard/profile" class="flex items-center text-body-2 {{ Request::is('dashboard/profile') ? 'text-orange' : '' }}">
                 <i class="ri-profile-line mr-2 ri-fw"></i>
                 Your Profile
             </a>
-        </div>
+        </div> --}}
         <div class=" mt-8 ml-10">
             <a href="/dashboard/settings" class="flex items-center text-body-2 {{ Request::is('dashboard/settings') ? 'text-orange' : '' }}">
                 <i class="ri-settings-3-line mr-2 ri-fw"></i>

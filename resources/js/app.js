@@ -29,6 +29,8 @@ import 'remixicon/fonts/remixicon.css';
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('modal', require('./components/Modal.vue').default);
+Vue.component('products', require('./views/public/Products.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42,7 +44,24 @@ const app = new Vue({
         return {
             show:false,
             test:false,
-            age:true
+            age:true,
+            formData:{
+                email:'ayanwoye74@gmail.com',
+                password:'dimeji22'
+            }
         };
     },
+    methods:{
+        handleLogin(){
+
+            axios.get('/sanctum/csrf-cookie')
+                .then(response => {
+                    axios.post('/login',this.formData).then((res) => {
+                        console.log(res);
+                    })
+                    .catch();
+                    console.log(response);
+                });
+        }
+    }
 });
