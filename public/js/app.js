@@ -5975,6 +5975,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    CThemeProvider: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CThemeProvider"],
     CBox: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CBox"],
     CButton: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CButton"],
     CFlex: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CFlex"],
@@ -6029,6 +6030,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @chakra-ui/vue */ "./node_modules/@chakra-ui/vue/dist/esm/index.js");
 //
 //
 //
@@ -6168,7 +6170,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    CThemeProvider: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CThemeProvider"],
+    CBox: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CBox"],
+    CImage: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CImage"],
+    CFlex: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_0__["CFlex"]
+  },
   data: function data() {
     return {};
   },
@@ -43925,7 +43954,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("c-theme-provider", [
+  return _c("CThemeProvider", [
     _c(
       "div",
       { staticClass: "bg-gray" },
@@ -44034,7 +44063,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $90.00\n                                "
+                                    "\n                                        $90.00\n                                    "
                                   )
                                 ]
                               ),
@@ -44050,7 +44079,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $500.00\n                                "
+                                    "\n                                        $500.00\n                                    "
                                   )
                                 ]
                               )
@@ -44073,7 +44102,7 @@ var render = function() {
                                 { attrs: { fontSize: "13px", mx: "6" } },
                                 [
                                   _vm._v(
-                                    "\n                                    Quantity:\n                                "
+                                    "\n                                        Quantity:\n                                    "
                                   )
                                 ]
                               ),
@@ -44209,7 +44238,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $90.00\n                                "
+                                    "\n                                        $90.00\n                                    "
                                   )
                                 ]
                               ),
@@ -44225,7 +44254,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $500.00\n                                "
+                                    "\n                                        $500.00\n                                    "
                                   )
                                 ]
                               )
@@ -44248,7 +44277,7 @@ var render = function() {
                                 { attrs: { fontSize: "13px", mx: "6" } },
                                 [
                                   _vm._v(
-                                    "\n                                    Quantity:\n                                "
+                                    "\n                                        Quantity:\n                                    "
                                   )
                                 ]
                               ),
@@ -44384,7 +44413,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $90.00\n                                "
+                                    "\n                                        $90.00\n                                    "
                                   )
                                 ]
                               ),
@@ -44400,7 +44429,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    $500.00\n                                "
+                                    "\n                                        $500.00\n                                    "
                                   )
                                 ]
                               )
@@ -44423,7 +44452,7 @@ var render = function() {
                                 { attrs: { fontSize: "13px", mx: "6" } },
                                 [
                                   _vm._v(
-                                    "\n                                    Quantity:\n                                "
+                                    "\n                                        Quantity:\n                                    "
                                   )
                                 ]
                               ),
@@ -44492,7 +44521,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        unregistered account\n                    "
+                        "\n                            unregistered account\n                        "
                       )
                     ]
                   ),
@@ -44549,7 +44578,7 @@ var render = function() {
                             { attrs: { fontSize: "xs", color: "gray.400" } },
                             [
                               _vm._v(
-                                "\n                                Order Summary\n                            "
+                                "\n                                    Order Summary\n                                "
                               )
                             ]
                           ),
@@ -44565,7 +44594,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                $122\n                            "
+                                "\n                                    $122\n                                "
                               )
                             ]
                           )
@@ -44584,7 +44613,7 @@ var render = function() {
                             { attrs: { fontSize: "xs", color: "gray.400" } },
                             [
                               _vm._v(
-                                "\n                                Addtional Service\n                            "
+                                "\n                                    Addtional Service\n                                "
                               )
                             ]
                           ),
@@ -44601,7 +44630,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                $50\n                            "
+                                "\n                                    $50\n                                "
                               )
                             ]
                           )
@@ -44620,7 +44649,7 @@ var render = function() {
                             { attrs: { fontSize: "xs", color: "gray.400" } },
                             [
                               _vm._v(
-                                "\n                                Total Amount\n                            "
+                                "\n                                    Total Amount\n                                "
                               )
                             ]
                           ),
@@ -44636,7 +44665,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                $122\n                            "
+                                "\n                                    $122\n                                "
                               )
                             ]
                           )
@@ -44685,7 +44714,7 @@ var render = function() {
                 attrs: { minHeight: "350px", minW: "500px", boxShadow: "sm" }
               },
               [
-                _c("c-modal-header", [_vm._v("Modal Title")]),
+                _c("c-modal-header", [_vm._v("Payment")]),
                 _vm._v(" "),
                 _c("c-modal-close-button"),
                 _vm._v(" "),
@@ -44697,7 +44726,7 @@ var render = function() {
                     _c(
                       "c-button",
                       { attrs: { "variant-color": "blue", mr: "3" } },
-                      [_vm._v("\n        Save\n      ")]
+                      [_vm._v("\n                    Save\n                ")]
                     ),
                     _vm._v(" "),
                     _c("c-button", { on: { click: _vm.close } }, [
@@ -44765,14 +44794,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
+  return _c("CThemeProvider", [
+    _c(
       "div",
       { staticClass: "flex flex-wrap relative bg-gray", staticStyle: {} },
       [
@@ -44860,7 +44883,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44876,7 +44927,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44892,7 +44971,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44910,7 +45017,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44926,7 +45061,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44942,7 +45105,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44960,7 +45151,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44976,7 +45195,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -44992,7 +45239,35 @@ var staticRenderFns = [
               { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" },
               [
                 _c("div", { staticClass: "mx-10" }, [
-                  _c("div", { staticClass: "bg-white h-64" }),
+                  _c(
+                    "div",
+                    { staticClass: "bg-white h-64" },
+                    [
+                      _c(
+                        "c-flex",
+                        {
+                          attrs: {
+                            "justify-content": "center",
+                            "align-items": "center",
+                            width: "100%",
+                            height: "100%"
+                          }
+                        },
+                        [
+                          _c("c-image", {
+                            attrs: {
+                              src: "images/shirt.png",
+                              size: "80%",
+                              my: "auto",
+                              objectFit: "cover"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("p", { staticClass: "mr-2 text-medium leading-26" }, [
                     _vm._v("Sport gear for racing")
@@ -45006,8 +45281,9 @@ var staticRenderFns = [
         ])
       ]
     )
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -57281,11 +57557,6 @@ Vue.component('checkout', __webpack_require__(/*! ./views/public/Checkout.vue */
 
 var app = new Vue({
   el: '#front',
-  // render: (h) => h(CThemeProvider, [h(CReset), h(Checkout),]),
-  components: {
-    CThemeProvider: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_2__["CThemeProvider"],
-    CReset: _chakra_ui_vue__WEBPACK_IMPORTED_MODULE_2__["CReset"]
-  },
   data: function data() {
     return {
       show: false,

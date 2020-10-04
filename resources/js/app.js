@@ -9,7 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vodal from 'vodal';
 import ToggleButton from 'vue-js-toggle-button'
-import Chakra, { CThemeProvider, CReset } from '@chakra-ui/vue'
+import Chakra from '@chakra-ui/vue'
 import chakraConfig from "./chakra-config"
 import Checkout from "./views/public/Checkout.vue"
 import Product from "./views/public/Product.vue"
@@ -50,11 +50,6 @@ Vue.component('checkout', require('./views/public/Checkout.vue').default);
 
 const app = new Vue({
     el: '#front',
-    // render: (h) => h(CThemeProvider, [h(CReset), h(Checkout),]),
-    components:{
-        CThemeProvider,
-        CReset
-    },
     data() {
         return {
             show:false,
