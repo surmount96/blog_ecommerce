@@ -44685,8 +44685,7 @@ var render = function() {
                         fontSize: "13px",
                         "variant-color": "blue",
                         variant: "outline"
-                      },
-                      on: { click: _vm.open }
+                      }
                     },
                     [_vm._v("Checkout")]
                   )
@@ -44718,20 +44717,18 @@ var render = function() {
                 _vm._v(" "),
                 _c("c-modal-close-button"),
                 _vm._v(" "),
-                _c("c-modal-body", [_c("Lorem", { attrs: { add: "2s" } })], 1),
+                _c("c-modal-body", {
+                  attrs: { pos: "relative", zIndex: "999999" }
+                }),
                 _vm._v(" "),
                 _c(
                   "c-modal-footer",
                   [
                     _c(
                       "c-button",
-                      { attrs: { "variant-color": "blue", mr: "3" } },
+                      { attrs: { "variant-color": "blue", size: "sm" } },
                       [_vm._v("\n                    Save\n                ")]
-                    ),
-                    _vm._v(" "),
-                    _c("c-button", { on: { click: _vm.close } }, [
-                      _vm._v("Cancel")
-                    ])
+                    )
                   ],
                   1
                 )

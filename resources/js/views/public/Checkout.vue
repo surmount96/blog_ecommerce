@@ -166,7 +166,7 @@
                                 
                             </c-box>
                             <!-- {{ money | formatNumber}} -->
-                            <c-button mb="3" w="100%" fontSize="13px" variant-color="blue" @click="open" variant="outline">Checkout</c-button>
+                            <c-button mb="3" w="100%" fontSize="13px" variant-color="blue" variant="outline">Checkout</c-button>
                         </div>
                     </div> 
                 </div>
@@ -177,17 +177,17 @@
             :on-close="close"
             boxShadow="sm"
             >
-                <c-modal-content ref="content" minHeight="350px" minW="500px" boxShadow="sm">
+                <c-modal-content  ref="content" minHeight="350px" minW="500px" boxShadow="sm">
                     <c-modal-header>Payment</c-modal-header>
                     <c-modal-close-button />
-                    <c-modal-body>
-                    <Lorem add="2s" />
+                    <c-modal-body pos="relative" zIndex="999999">
+                   
                     </c-modal-body>
                     <c-modal-footer>
-                    <c-button variant-color="blue" mr="3">
+                    <c-button variant-color="blue" size="sm">
                         Save
                     </c-button>
-                    <c-button @click="close">Cancel</c-button>
+                    <!-- <c-button @click="close">Cancel</c-button> -->
                     </c-modal-footer>
                 </c-modal-content>
                 <c-modal-overlay bg="" />
