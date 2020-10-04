@@ -134,7 +134,7 @@
                             <c-box my="6">
                                 <c-flex align-items="center" justify-content="space-between" mb="3">
                                     <c-stack spacing="3">
-                                        <c-input placeholder="small size" size="md" />
+                                        <c-input placeholder="coupon" size="md" />
                                     </c-stack>
                                     <c-button ml="3" w="40%" fontSize="10px" variant-color="blue" >Apply</c-button>
                                 </c-flex>

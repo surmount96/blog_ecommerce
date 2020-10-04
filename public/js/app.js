@@ -44545,7 +44545,7 @@ var render = function() {
                             { attrs: { spacing: "3" } },
                             [
                               _c("c-input", {
-                                attrs: { placeholder: "small size", size: "md" }
+                                attrs: { placeholder: "coupon", size: "md" }
                               })
                             ],
                             1
