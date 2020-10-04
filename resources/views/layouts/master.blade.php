@@ -10,11 +10,14 @@
         
     </head>
     <body class="text-dark">
-        <div id="front">
+        <div class="">
             @include('inc.navbar')
-            <main>
-                @yield('content')
-            </main>
+        </div>
+        <main id="front" class="bg-gray">
+            @yield('content')
+           
+        </main>
+        <div class="">
             @include('inc.footer')
         </div>
     <script src="{{ asset('js/app.js') }}"></script>

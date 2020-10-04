@@ -24,6 +24,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@chakra-ui/vue": "^0.6.6",
+        "emotion": "^10.0.27",
         "remixicon": "^2.5.0",
         "tailwindcss": "^1.7.3",
         "tailwindcss-gradients": "^3.0.0",

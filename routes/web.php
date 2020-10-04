@@ -37,6 +37,10 @@ Route::get('/shop', function () {
     return view('base.shop');
 });
 
+Route::get('/checkout', function () {
+    return view('base.checkout');
+});
+
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
