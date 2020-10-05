@@ -2,7 +2,7 @@
     <CThemeProvider>
         <div class="bg-gray">
             <div class="flex flex-wrap lg:mx-20 py-24">
-                <div class="lg:w-2/3 md:w-2/3 sm:w-1/2 w-full mb-4">
+                <div class="lg:w-2/3 md:w-2/3 lg:mx-0 md:mx-0 mx-5 w-full mb-4">
                     <div class="mr-">
                         <h6 class="text-body-2 mb-2">Order</h6>
                         <div class="bg-white  rounded p-8">
@@ -124,8 +124,8 @@
                         </div>
                     </div> 
                 </div>
-                <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                    <div class="ml-5">
+                <div class="lg:w-1/3 md:w-1/3 lg:mx-0 md:mx-0 mx-6 w-full mb-4">
+                    <div class="lg:ml-5 md:ml-5 ">
                         <h6 class="text-body-2 mb-2">Payment Summary</h6>
                         <div class="bg-white rounded p-6">
                             <c-text align="center" textTransform="uppercase" bg="gray.50" py="3" fontSize="sm">

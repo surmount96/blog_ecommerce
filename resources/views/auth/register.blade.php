@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex flex-wrap">
     <div class="lg:w-1/2 md:w-1/2 w-full lg:py-32 md:py-24 px-20 py-32 lg:px-24 md:px-20 px-10 " style="height:100vh">
-        <div class="text-blue text-h3 font-semibold text-center">{{ __('Create an account') }}</div>
+        <div class="text-blue text-h3 font-extrabold text-center">{{ __('Create an account') }}</div>
         <p class="text-gray-dark mb-5 text-medium text-center">
             Already have an account?
             <a href="/login" class="text-blue underline">signin</a>

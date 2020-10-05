@@ -43960,740 +43960,763 @@ var render = function() {
       { staticClass: "bg-gray" },
       [
         _c("div", { staticClass: "flex flex-wrap lg:mx-20 py-24" }, [
-          _c("div", { staticClass: "lg:w-2/3 md:w-2/3 sm:w-1/2 w-full mb-4" }, [
-            _c("div", { staticClass: "mr-" }, [
-              _c("h6", { staticClass: "text-body-2 mb-2" }, [_vm._v("Order")]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "bg-white  rounded p-8" },
-                [
-                  _c(
-                    "c-flex",
-                    {
-                      attrs: {
-                        "justify-content": "space-between",
-                        "align-items": "center",
-                        mb: "6"
-                      }
-                    },
-                    [
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: {
-                            "align-items": "center",
-                            width: "29%",
-                            mr: "10px"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                my: "auto",
-                                bg: "white.50",
-                                width: "52%"
-                              }
-                            },
-                            [
-                              _c("c-image", {
+          _c(
+            "div",
+            {
+              staticClass: "lg:w-2/3 md:w-2/3 lg:mx-0 md:mx-0 mx-5 w-full mb-4"
+            },
+            [
+              _c("div", { staticClass: "mr-" }, [
+                _c("h6", { staticClass: "text-body-2 mb-2" }, [
+                  _vm._v("Order")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "bg-white  rounded p-8" },
+                  [
+                    _c(
+                      "c-flex",
+                      {
+                        attrs: {
+                          "justify-content": "space-between",
+                          "align-items": "center",
+                          mb: "6"
+                        }
+                      },
+                      [
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "align-items": "center",
+                              width: "29%",
+                              mr: "10px"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-box",
+                              {
                                 attrs: {
-                                  src: "images/shirt.png",
-                                  size: "70px",
-                                  objectFit: "cover"
+                                  my: "auto",
+                                  bg: "white.50",
+                                  width: "52%"
                                 }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-flex",
-                            {
-                              attrs: {
-                                fontSize: "11px",
-                                my: "auto",
-                                flexDirection: "column"
-                              }
-                            },
-                            [
-                              _c("c-text", [_vm._v("Air Red Pants")]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Color:")
-                              ]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Size:")
-                              ])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-box",
-                        {
-                          attrs: {
-                            width: "60%",
-                            display: "flex",
-                            "align-items": "center",
-                            "justify-content": "space-between"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-flex",
-                            { attrs: { "align-items": "center" } },
-                            [
-                              _c(
-                                "c-text",
-                                {
+                              },
+                              [
+                                _c("c-image", {
                                   attrs: {
-                                    "text-align": "center",
-                                    fontWeight: "500",
-                                    color: "red.200",
-                                    fontSize: "13px",
-                                    mx: "6"
+                                    src: "images/shirt.png",
+                                    size: "70px",
+                                    objectFit: "cover"
                                   }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $90.00\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-text",
-                                {
-                                  attrs: {
-                                    "text-align": "center",
-                                    fontSize: "13px",
-                                    mx: "6"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $500.00\n                                    "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                width: "40%",
-                                display: "flex",
-                                "align-items": "center"
-                              }
-                            },
-                            [
-                              _c(
-                                "c-text",
-                                { attrs: { fontSize: "13px", mx: "6" } },
-                                [
-                                  _vm._v(
-                                    "\n                                        Quantity:\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-number-input",
-                                {
-                                  attrs: {
-                                    "default-value": 1,
-                                    size: "sm",
-                                    max: 30,
-                                    min: 1,
-                                    "clamp-value-on-blur": true
-                                  }
-                                },
-                                [
-                                  _c("c-number-input-field"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "c-number-input-stepper",
-                                    [
-                                      _c("c-numberIncrement-stepper"),
-                                      _vm._v(" "),
-                                      _c("c-number-decrement-stepper")
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "c-flex",
-                    {
-                      attrs: {
-                        "justify-content": "space-between",
-                        "align-items": "center",
-                        mb: "6"
-                      }
-                    },
-                    [
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: {
-                            "align-items": "center",
-                            width: "29%",
-                            mr: "10px"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                my: "auto",
-                                bg: "white.50",
-                                width: "52%"
-                              }
-                            },
-                            [
-                              _c("c-image", {
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-flex",
+                              {
                                 attrs: {
-                                  src: "images/shirt.png",
-                                  size: "70px",
-                                  objectFit: "cover"
+                                  fontSize: "11px",
+                                  my: "auto",
+                                  flexDirection: "column"
                                 }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-flex",
-                            {
-                              attrs: {
-                                fontSize: "11px",
-                                my: "auto",
-                                flexDirection: "column"
-                              }
-                            },
-                            [
-                              _c("c-text", [_vm._v("Air Red Pants")]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Color:")
-                              ]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Size:")
-                              ])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-box",
-                        {
-                          attrs: {
-                            width: "60%",
-                            display: "flex",
-                            "align-items": "center",
-                            "justify-content": "space-between"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-flex",
-                            { attrs: { "align-items": "center" } },
-                            [
-                              _c(
-                                "c-text",
-                                {
-                                  attrs: {
-                                    "text-align": "center",
-                                    fontWeight: "500",
-                                    color: "red.200",
-                                    fontSize: "13px",
-                                    mx: "6"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $90.00\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-text",
-                                {
-                                  attrs: {
-                                    "text-align": "center",
-                                    fontSize: "13px",
-                                    mx: "6"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $500.00\n                                    "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                width: "40%",
-                                display: "flex",
-                                "align-items": "center"
-                              }
-                            },
-                            [
-                              _c(
-                                "c-text",
-                                { attrs: { fontSize: "13px", mx: "6" } },
-                                [
-                                  _vm._v(
-                                    "\n                                        Quantity:\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-number-input",
-                                {
-                                  attrs: {
-                                    "default-value": 1,
-                                    size: "sm",
-                                    max: 30,
-                                    min: 1,
-                                    "clamp-value-on-blur": true
-                                  }
-                                },
-                                [
-                                  _c("c-number-input-field"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "c-number-input-stepper",
-                                    [
-                                      _c("c-numberIncrement-stepper"),
-                                      _vm._v(" "),
-                                      _c("c-number-decrement-stepper")
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "c-flex",
-                    {
-                      attrs: {
-                        "justify-content": "space-between",
-                        "align-items": "center",
-                        mb: "6"
-                      }
-                    },
-                    [
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: {
-                            "align-items": "center",
-                            width: "29%",
-                            mr: "10px"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                my: "auto",
-                                bg: "white.50",
-                                width: "52%"
-                              }
-                            },
-                            [
-                              _c("c-image", {
+                              },
+                              [
+                                _c("c-text", [_vm._v("Air Red Pants")]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Color:")
+                                ]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Size:")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-box",
+                          {
+                            attrs: {
+                              width: "60%",
+                              display: "flex",
+                              "align-items": "center",
+                              "justify-content": "space-between"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-flex",
+                              { attrs: { "align-items": "center" } },
+                              [
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontWeight: "500",
+                                      color: "red.200",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $90.00\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $500.00\n                                    "
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-box",
+                              {
                                 attrs: {
-                                  src: "images/shirt.png",
-                                  size: "70px",
-                                  objectFit: "cover"
+                                  width: "40%",
+                                  display: "flex",
+                                  "align-items": "center"
                                 }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-flex",
-                            {
-                              attrs: {
-                                fontSize: "11px",
-                                my: "auto",
-                                flexDirection: "column"
-                              }
-                            },
-                            [
-                              _c("c-text", [_vm._v("Air Red Pants")]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Color:")
-                              ]),
-                              _vm._v(" "),
-                              _c("c-text", { attrs: { color: "gray.500" } }, [
-                                _vm._v("Size:")
-                              ])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-box",
-                        {
-                          attrs: {
-                            width: "60%",
-                            display: "flex",
-                            "align-items": "center",
-                            "justify-content": "space-between"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-flex",
-                            { attrs: { "align-items": "center" } },
-                            [
-                              _c(
-                                "c-text",
-                                {
+                              },
+                              [
+                                _c(
+                                  "c-text",
+                                  { attrs: { fontSize: "13px", mx: "6" } },
+                                  [
+                                    _vm._v(
+                                      "\n                                        Quantity:\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-number-input",
+                                  {
+                                    attrs: {
+                                      "default-value": 1,
+                                      size: "sm",
+                                      max: 30,
+                                      min: 1,
+                                      "clamp-value-on-blur": true
+                                    }
+                                  },
+                                  [
+                                    _c("c-number-input-field"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "c-number-input-stepper",
+                                      [
+                                        _c("c-numberIncrement-stepper"),
+                                        _vm._v(" "),
+                                        _c("c-number-decrement-stepper")
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "c-flex",
+                      {
+                        attrs: {
+                          "justify-content": "space-between",
+                          "align-items": "center",
+                          mb: "6"
+                        }
+                      },
+                      [
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "align-items": "center",
+                              width: "29%",
+                              mr: "10px"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-box",
+                              {
+                                attrs: {
+                                  my: "auto",
+                                  bg: "white.50",
+                                  width: "52%"
+                                }
+                              },
+                              [
+                                _c("c-image", {
                                   attrs: {
-                                    "text-align": "center",
-                                    fontWeight: "500",
-                                    color: "red.200",
-                                    fontSize: "13px",
-                                    mx: "6"
+                                    src: "images/shirt.png",
+                                    size: "70px",
+                                    objectFit: "cover"
                                   }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $90.00\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-text",
-                                {
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-flex",
+                              {
+                                attrs: {
+                                  fontSize: "11px",
+                                  my: "auto",
+                                  flexDirection: "column"
+                                }
+                              },
+                              [
+                                _c("c-text", [_vm._v("Air Red Pants")]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Color:")
+                                ]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Size:")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-box",
+                          {
+                            attrs: {
+                              width: "60%",
+                              display: "flex",
+                              "align-items": "center",
+                              "justify-content": "space-between"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-flex",
+                              { attrs: { "align-items": "center" } },
+                              [
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontWeight: "500",
+                                      color: "red.200",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $90.00\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $500.00\n                                    "
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-box",
+                              {
+                                attrs: {
+                                  width: "40%",
+                                  display: "flex",
+                                  "align-items": "center"
+                                }
+                              },
+                              [
+                                _c(
+                                  "c-text",
+                                  { attrs: { fontSize: "13px", mx: "6" } },
+                                  [
+                                    _vm._v(
+                                      "\n                                        Quantity:\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-number-input",
+                                  {
+                                    attrs: {
+                                      "default-value": 1,
+                                      size: "sm",
+                                      max: 30,
+                                      min: 1,
+                                      "clamp-value-on-blur": true
+                                    }
+                                  },
+                                  [
+                                    _c("c-number-input-field"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "c-number-input-stepper",
+                                      [
+                                        _c("c-numberIncrement-stepper"),
+                                        _vm._v(" "),
+                                        _c("c-number-decrement-stepper")
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "c-flex",
+                      {
+                        attrs: {
+                          "justify-content": "space-between",
+                          "align-items": "center",
+                          mb: "6"
+                        }
+                      },
+                      [
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "align-items": "center",
+                              width: "29%",
+                              mr: "10px"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-box",
+                              {
+                                attrs: {
+                                  my: "auto",
+                                  bg: "white.50",
+                                  width: "52%"
+                                }
+                              },
+                              [
+                                _c("c-image", {
                                   attrs: {
-                                    "text-align": "center",
-                                    fontSize: "13px",
-                                    mx: "6"
+                                    src: "images/shirt.png",
+                                    size: "70px",
+                                    objectFit: "cover"
                                   }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        $500.00\n                                    "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-box",
-                            {
-                              attrs: {
-                                width: "40%",
-                                display: "flex",
-                                "align-items": "center"
-                              }
-                            },
-                            [
-                              _c(
-                                "c-text",
-                                { attrs: { fontSize: "13px", mx: "6" } },
-                                [
-                                  _vm._v(
-                                    "\n                                        Quantity:\n                                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "c-number-input",
-                                {
-                                  attrs: {
-                                    "default-value": 1,
-                                    size: "sm",
-                                    max: 30,
-                                    min: 1,
-                                    "clamp-value-on-blur": true
-                                  }
-                                },
-                                [
-                                  _c("c-number-input-field"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "c-number-input-stepper",
-                                    [
-                                      _c("c-numberIncrement-stepper"),
-                                      _vm._v(" "),
-                                      _c("c-number-decrement-stepper")
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ])
-          ]),
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-flex",
+                              {
+                                attrs: {
+                                  fontSize: "11px",
+                                  my: "auto",
+                                  flexDirection: "column"
+                                }
+                              },
+                              [
+                                _c("c-text", [_vm._v("Air Red Pants")]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Color:")
+                                ]),
+                                _vm._v(" "),
+                                _c("c-text", { attrs: { color: "gray.500" } }, [
+                                  _vm._v("Size:")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-box",
+                          {
+                            attrs: {
+                              width: "60%",
+                              display: "flex",
+                              "align-items": "center",
+                              "justify-content": "space-between"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-flex",
+                              { attrs: { "align-items": "center" } },
+                              [
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontWeight: "500",
+                                      color: "red.200",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $90.00\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-text",
+                                  {
+                                    attrs: {
+                                      "text-align": "center",
+                                      fontSize: "13px",
+                                      mx: "6"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        $500.00\n                                    "
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-box",
+                              {
+                                attrs: {
+                                  width: "40%",
+                                  display: "flex",
+                                  "align-items": "center"
+                                }
+                              },
+                              [
+                                _c(
+                                  "c-text",
+                                  { attrs: { fontSize: "13px", mx: "6" } },
+                                  [
+                                    _vm._v(
+                                      "\n                                        Quantity:\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "c-number-input",
+                                  {
+                                    attrs: {
+                                      "default-value": 1,
+                                      size: "sm",
+                                      max: 30,
+                                      min: 1,
+                                      "clamp-value-on-blur": true
+                                    }
+                                  },
+                                  [
+                                    _c("c-number-input-field"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "c-number-input-stepper",
+                                      [
+                                        _c("c-numberIncrement-stepper"),
+                                        _vm._v(" "),
+                                        _c("c-number-decrement-stepper")
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" }, [
-            _c("div", { staticClass: "ml-5" }, [
-              _c("h6", { staticClass: "text-body-2 mb-2" }, [
-                _vm._v("Payment Summary")
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "bg-white rounded p-6" },
-                [
-                  _c(
-                    "c-text",
-                    {
-                      attrs: {
-                        align: "center",
-                        textTransform: "uppercase",
-                        bg: "gray.50",
-                        py: "3",
-                        fontSize: "sm"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            unregistered account\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "c-box",
-                    { attrs: { my: "6" } },
-                    [
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: {
-                            "align-items": "center",
-                            "justify-content": "space-between",
-                            mb: "3"
-                          }
-                        },
-                        [
-                          _c(
-                            "c-stack",
-                            { attrs: { spacing: "3" } },
-                            [
-                              _c("c-input", {
-                                attrs: { placeholder: "coupon", size: "md" }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-button",
-                            {
-                              attrs: {
-                                ml: "3",
-                                w: "40%",
-                                fontSize: "10px",
-                                "variant-color": "blue"
-                              }
-                            },
-                            [_vm._v("Apply")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: { "justify-content": "space-between", mb: "3" }
-                        },
-                        [
-                          _c(
-                            "c-text",
-                            { attrs: { fontSize: "xs", color: "gray.400" } },
-                            [
-                              _vm._v(
-                                "\n                                    Order Summary\n                                "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-text",
-                            {
-                              attrs: {
-                                fontSize: "xs",
-                                color: "gray.400",
-                                mb: "3"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    $122\n                                "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: { "justify-content": "space-between", mb: "3" }
-                        },
-                        [
-                          _c(
-                            "c-text",
-                            { attrs: { fontSize: "xs", color: "gray.400" } },
-                            [
-                              _vm._v(
-                                "\n                                    Addtional Service\n                                "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-text",
-                            {
-                              attrs: {
-                                fontSize: "xs",
-                                fontWeight: "600",
-                                color: "blue.200",
-                                mb: "3"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    $50\n                                "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "c-flex",
-                        {
-                          attrs: { "justify-content": "space-between", mb: "3" }
-                        },
-                        [
-                          _c(
-                            "c-text",
-                            { attrs: { fontSize: "xs", color: "gray.400" } },
-                            [
-                              _vm._v(
-                                "\n                                    Total Amount\n                                "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "c-text",
-                            {
-                              attrs: {
-                                fontSize: "xs",
-                                color: "gray.400",
-                                mb: "3"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    $122\n                                "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "c-button",
-                    {
-                      attrs: {
-                        mb: "3",
-                        w: "100%",
-                        fontSize: "13px",
-                        "variant-color": "blue",
-                        variant: "outline"
-                      }
-                    },
-                    [_vm._v("Checkout")]
-                  )
-                ],
-                1
-              )
-            ])
-          ])
+          _c(
+            "div",
+            {
+              staticClass: "lg:w-1/3 md:w-1/3 lg:mx-0 md:mx-0 mx-6 w-full mb-4"
+            },
+            [
+              _c("div", { staticClass: "lg:ml-5 md:ml-5 " }, [
+                _c("h6", { staticClass: "text-body-2 mb-2" }, [
+                  _vm._v("Payment Summary")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "bg-white rounded p-6" },
+                  [
+                    _c(
+                      "c-text",
+                      {
+                        attrs: {
+                          align: "center",
+                          textTransform: "uppercase",
+                          bg: "gray.50",
+                          py: "3",
+                          fontSize: "sm"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            unregistered account\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "c-box",
+                      { attrs: { my: "6" } },
+                      [
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "align-items": "center",
+                              "justify-content": "space-between",
+                              mb: "3"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-stack",
+                              { attrs: { spacing: "3" } },
+                              [
+                                _c("c-input", {
+                                  attrs: { placeholder: "coupon", size: "md" }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-button",
+                              {
+                                attrs: {
+                                  ml: "3",
+                                  w: "40%",
+                                  fontSize: "10px",
+                                  "variant-color": "blue"
+                                }
+                              },
+                              [_vm._v("Apply")]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "justify-content": "space-between",
+                              mb: "3"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-text",
+                              { attrs: { fontSize: "xs", color: "gray.400" } },
+                              [
+                                _vm._v(
+                                  "\n                                    Order Summary\n                                "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-text",
+                              {
+                                attrs: {
+                                  fontSize: "xs",
+                                  color: "gray.400",
+                                  mb: "3"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    $122\n                                "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "justify-content": "space-between",
+                              mb: "3"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-text",
+                              { attrs: { fontSize: "xs", color: "gray.400" } },
+                              [
+                                _vm._v(
+                                  "\n                                    Addtional Service\n                                "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-text",
+                              {
+                                attrs: {
+                                  fontSize: "xs",
+                                  fontWeight: "600",
+                                  color: "blue.200",
+                                  mb: "3"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    $50\n                                "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "c-flex",
+                          {
+                            attrs: {
+                              "justify-content": "space-between",
+                              mb: "3"
+                            }
+                          },
+                          [
+                            _c(
+                              "c-text",
+                              { attrs: { fontSize: "xs", color: "gray.400" } },
+                              [
+                                _vm._v(
+                                  "\n                                    Total Amount\n                                "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "c-text",
+                              {
+                                attrs: {
+                                  fontSize: "xs",
+                                  color: "gray.400",
+                                  mb: "3"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    $122\n                                "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "c-button",
+                      {
+                        attrs: {
+                          mb: "3",
+                          w: "100%",
+                          fontSize: "13px",
+                          "variant-color": "blue",
+                          variant: "outline"
+                        }
+                      },
+                      [_vm._v("Checkout")]
+                    )
+                  ],
+                  1
+                )
+              ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c(
