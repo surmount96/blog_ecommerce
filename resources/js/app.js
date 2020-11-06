@@ -11,10 +11,10 @@ import Vodal from 'vodal';
 import ToggleButton from 'vue-js-toggle-button'
 import Chakra from '@chakra-ui/vue'
 import chakraConfig from "./chakra-config"
-import Checkout from "./views/public/Checkout.vue"
-import Product from "./views/public/Product.vue"
-import Products from "./views/public/Products.vue"
 import Modal from "./components/Modal.vue"
+import router from "./router/public";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 Vue.use(ToggleButton)
@@ -39,7 +39,7 @@ import 'remixicon/fonts/remixicon.css';
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('modal', require('./components/Modal.vue').default);
 Vue.component('products', require('./views/public/Products.vue').default);
-Vue.component('product', require('./views/public/Product.vue').default);
+Vue.component('product-layout', require('./views/public/layout/ProductLayout.vue').default);
 Vue.component('checkout', require('./views/public/Checkout.vue').default);
 
 /**
@@ -50,6 +50,7 @@ Vue.component('checkout', require('./views/public/Checkout.vue').default);
 
 const app = new Vue({
     el: '#front',
+    router,
     data() {
         return {
             show:false,
@@ -60,6 +61,9 @@ const app = new Vue({
                 password:'dimeji22'
             }
         };
+    },
+    created(){
+        AOS.init();
     },
     methods:{
         handleLogin(){

@@ -16,6 +16,9 @@ body{
     height:85vh;
 }
 
+.transition{
+    transition: opacity .2s .3s,width linear .2s .3s,margin linear .2s .3s;
+}
 @media screen and (max-width: 760px) {
     .height{
         height:60vh;

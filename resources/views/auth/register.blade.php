@@ -18,7 +18,7 @@
                             <i class="ri-user-line ri-fw text-gray-100"></i>
                         </div>
                         @if($errors->has('name'))
-                            <span class="text-red" role="alert">
+                            <span class="text-red text-medium" role="alert">
                                 {{ $errors->first('name') }}
                             </span>
                         @endif
@@ -32,7 +32,7 @@
                             <i class="ri-mail-line ri-fw text-gray-100"></i>
                         </div>
                         @if($errors->has('email'))
-                            <span class="text-red" role="alert">
+                            <span class="text-red text-medium" role="alert">
                                 {{ $errors->first('email') }}
                             </span>
                         @endif
@@ -51,7 +51,7 @@
                         <i class="ri-eye-line ri-fw text-gray-100"></i>
                     </div>
                     @if($errors->has('password'))
-                        <span class="text-red" role="alert">
+                        <span class="text-red text-medium" role="alert">
                             {{ $errors->first('password') }}
                         </span>
                     @endif

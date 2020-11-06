@@ -153,10 +153,6 @@ module.exports = {
             green: '#5FCAAF',
             yellow: '#FFC82C',
         }),
-        fontFamily: {
-            display: ['Gilroy', 'sans-serif'],
-            body: ['Graphik', 'sans-serif'],
-        },
         borderWidth: {
             default: '1px',
             '0': '0',

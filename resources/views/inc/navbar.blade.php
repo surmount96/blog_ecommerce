@@ -1,8 +1,8 @@
 @if(request()->path() != 'shop')
-    <nav class="flex py-2 items-center justify-between @if(request()->path() == '/') bg-blue-base @else bg-white border-b border-gray @endif lg:px-20 md:px-16 px-10">
-        <div class="">
-            <a href="/">
-                <img src="{{ asset('images/logo/logo2.jpeg') }}" alt="logo" class="w-16">
+    <nav class="flex relative py-5 items-center bg-blue justify-end text-white lg:px-20 md:px-16 px-10">
+        <div class="absolute left-0 ml-8">
+            <a href="/" class="">
+                <img src="{{ asset('images/logo/logo3.png') }}" alt="logo" class="object-cover w-32 h-16">
             </a>
         </div>
         <ul class="lg:flex md:flex hidden text-medium">
@@ -11,7 +11,9 @@
             <li class="px-6"><a href="services">Service</a></li>
             <li class="px-6"><a href="/about">About</a></li>
             <li class="pl-6"><a href="/contact">Contact</a></li>
+            @guest
             <li class="pl-6"><a href="/register" class="text-orange border border-orange hover:bg-orange hover:text-white text-medium py-2 px-6">Register</a></li>
+            @endguest
         </ul>
         <ul class="lg:hidden md:hidden flex">
             <li class="cursor-pointer" @click="">

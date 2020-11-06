@@ -45,112 +45,30 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="flex flex-wrap py-8 mb-4">
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
+                <div class="flex flex-wrap py-8 mb-4" v-show="!loading">
+                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4" v-for="product in products" :key="product.id">
+                        <a :href="'/product/'+product.slug">
+                            <div class="mx-10">
+                                <div class="bg-white h-64">
+                                    <c-flex justify-content="center" align-items="center" width="100%" height="100%">
+                                        <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
+                                    </c-flex>
+                                </div>
+                                <p class="mr-2 text-medium leading-26">{{ product.product_name }}</p>
+                                <p class="mr-2 text-medium">NGN {{ product.price }}</p>
                             </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
+                        </a>
                         
                     </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
+    
+                </div>
+
+                <div class="flex flex-wrap py-8 mb-4" v-show="loading">
+                    <div class="flex items-center w-12 mx-auto h-64">
+                        <c-spinner color="blue.500" />
                     </div>
                 </div>
-                <div class="flex flex-wrap py-8 mb-4">
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap py-8 mb-4">
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-                        <div class="mx-10">
-                            <div class="bg-white h-64">
-                                <c-flex justify-content="center" align-items="center" width="100%" height="100%">
-                                    <c-image src="images/shirt.png" size="80%" my="auto" objectFit="cover" />
-                                </c-flex>
-                            </div>
-                            <p class="mr-2 text-medium leading-26">Sport gear for racing</p>
-                            <p class="mr-2 text-medium">$178</p>
-                        </div>
-                    </div>
-                </div>
+               
 
             </div>
         </div>
@@ -158,21 +76,37 @@
 </template>
 
 <script>
-import { CThemeProvider, CBox, CImage, CFlex, } from '@chakra-ui/vue'
+import { CThemeProvider, CBox, CImage, CFlex, CSpinner } from '@chakra-ui/vue';
+import { RepositoryFactory as Repo } from "../../repository/RepositoryFactory";
+const PD = Repo.get('public');
+
 export default {
     components:{
         CThemeProvider,
         CBox,
         CImage,
-        CFlex
+        CFlex, CSpinner
     },
     data(){
         return {
-
+            products:{},
+            loading:false
         };
     },
+    mounted(){
+        this.getProducts();
+    },
     methods:{
-
+        async getProducts(){
+            this.loading = true;
+            try{
+                let response = await PD.allProduct();
+                this.products = response.data.products;
+                this.loading = false;
+            }catch (e){
+                //
+            }
+        }
     }
 }
 </script>

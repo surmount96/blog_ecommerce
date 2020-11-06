@@ -1,40 +1,43 @@
 @extends('layouts.master')
 
 @section('content')
-    <header class="bg-blue-deeper h-64 opacity-2 flex flex-col justify-center">
-        <div class="">
-            <h3 class="text-white text-center text-h3" style="letter-spacing: 6px">Services</h3>
+<section class="lg:ml-24 lg:mr-16 md:mx-8 mx-5 mt-6">
+    <div class="flex flex-col items-center justify-center" style="min-height: 60vh">
+        <h3 class="text-h1 font-semibold text-black mb-3">Where work happens</h3>
+        <p>Whatever work you do, you can use Rebondlr for your business.</p>
+        <div class="flex flex-wrap mt-5">
+            <button class="bg-blue text-white py-3 text-medium px-8 my-5">Discover</button>
+            <a href="login" class="border border-blue text-blue py-3 text-medium px-8 my-5 ml-3">Try for Free</a>
         </div>
-    </header>
-    <div class="w-full my-3">
-        {{-- <h2 class="text-center font-semibold text-h4 text-green">
-            Our services
-        </h2> --}}
     </div>
-    <div class="flex flex-wrap my-4">
+    <div class="flex flex-wrap mb-5">
         <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
-            <div class="mx-auto shadow-md h-64 rounded-lg p-2" style="width:80%">
-                <div class="h-40 bg-blue">
+            <div class="bg-white shadow border border-gray-100 p-4 mx-auto" style="width:85%">
+                <div class="mb-3">
+                    <i class="ri-psychotherapy-line text-h3"></i>
                 </div>
-                <h6 class="text-medium m-2">Hello world, come right here.</h6>
+                <h3 class="font-semibold">Therapy</h3>
+                <p class="text-medium mt-3 text-gray-3000">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti maxime, temporibus ratione repudiandae placeat assumenda sint optio, ad impedit u</p>
             </div>
         </div>
-        <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mt-40">
-            <div class="mx-auto shadow-md h-64 rounded-lg p-2" style="width:80%">
-                <div class="h-40 bg-warning">
+        <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
+            <div class="bg-white shadow border border-gray-100 p-4 mx-auto" style="width:85%">
+                <div class="mb-3">
+                    <i class="ri-shopping-cart-line text-h3"></i>
                 </div>
-                <h6 class="text-medium m-2">Hello world, come right here.</h6>
+                <h3 class="font-semibold">Merchandise</h3>
+                <p class="text-medium mt-3 text-gray-3000">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti maxime, temporibus ratione repudiandae placeat assumenda sint optio, ad impedit u</p>
             </div>
         </div>
-        <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mt-64">
-            <div class="mx-auto shadow-md h-64 rounded-lg p-2" style="width:80%">
-                <div class="h-40 bg-green">
+        <div class="lg:w-1/3 md:w-1/3 sm:w-1/2 w-full mb-4">
+            <div class="bg-white shadow border border-gray-100 p-4 mx-auto" style="width:85%">
+                <div class="mb-3">
+                    <i class="ri-git-repository-line text-h3"></i>
                 </div>
-                <h6 class="text-medium m-2">Hello world, come right here.</h6>
-                <div class="">
-                    button.bg-blue.
-                </div>
+                <h3 class="font-semibold">Blog</h3>
+                <p class="text-medium mt-3 text-gray-3000">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti maxime, temporibus ratione repudiandae placeat assumenda sint optio, ad impedit u</p>
             </div>
         </div>
     </div>
+</section>
 @endsection

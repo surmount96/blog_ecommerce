@@ -1,12 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import protectedRoutes from "../views/protected/router";
-import NotFound from "../views/NotFound.vue";
+import protectedRoutes from "../../views/protected/router";
+import publicRoutes from "../../views/public/router";
+import NotFound from "../../views/NotFound.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
     ...protectedRoutes,
+    ...publicRoutes,
     {
         path:'*',
         component:NotFound

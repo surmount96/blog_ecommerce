@@ -3,7 +3,7 @@
 @section('content')
     <header class="" style="background-image: url('{{ asset('images/service.svg') }}'); background-size:cover; background-position:center bottom;height: 80vh;">
         <div class="flex flex-wrap">
-            <div class="lg:w-2/4 md:w-2/4 sm:w-1/2 w-full lg:px-10 px-6  py-20 text-white">
+            <div class="lg:w-2/4 md:w-2/4 sm:w-1/2 w-full lg:px-20 px-6  py-20 text-white">
                 <h3 class="text-h3">Contact Us</h3>
                 <p class="text-medium leading-33">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et culpa sint optio sit qui exercitationem repellat dignissimos? Voluptatem rerum quaerat suscipit consequatur porro minima, commodi mollitia, animi adipisci veritatis laboriosam.</p>
             </div>

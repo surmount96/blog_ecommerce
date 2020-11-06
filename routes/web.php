@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('base.index');
 });
 
+Route::get('/notfound',function(){
+    return view('errors.pagenotfound');
+})->name('notfound');
+
 Route::get('/services', function () {
     return view('base.service');
 });
@@ -37,8 +41,19 @@ Route::get('/shop', function () {
     return view('base.shop');
 });
 
+Route::get('/product/{id}', function () {
+    return view('base.product');
+});
+
 Route::get('/checkout', function () {
     return view('base.checkout');
+});
+
+
+Route::group(['middleware' => ['auth','admin']], function(){
+    Route::get('/admin/{any}',function(){
+        return view('admin.index');
+    });
 });
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
@@ -48,6 +63,6 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth','user']], function() {
     Route::get('{any}', 'HomeController@index');
 });

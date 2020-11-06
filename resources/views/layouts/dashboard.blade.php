@@ -23,10 +23,10 @@
     <div id="Admin">
         <main>
             <div class="flex flex-wrap relative">
-                <div class="w-2/12 z-50 border-r border-gray fixed top-0 left-0 bg-white" style="height: 100vh;width:225px">
+                <div class="lg:block md:block hidden z-50 border-r border-gray fixed top-0 left-0 bg-white transition"   style="height: 100vh;" :style="[ hideText ? { width: '4rem'} : '', !hideText ? { width: '13rem'} : '']">
                     @include('dashboard.inc.aside')
                 </div>
-                <div class="lg:w-10/12 md:w-10/12 w-full absolute right-0 top-0">
+                <div class="w-full absolute right-0 top-0 transition" :class="{'lg:w-10/12 md:w-11/12 ': !hideText}" :style="[ hideText ? { width: '95%'} : '']">
                     <div class="">
                         @include('dashboard.inc.navbar')
                     </div>

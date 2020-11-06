@@ -13,7 +13,7 @@
         <div class="">
             @include('inc.navbar')
         </div>
-        <main id="front" class="bg-gray">
+        <main id="front" class="">
             @yield('content')
            
         </main>

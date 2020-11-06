@@ -2,121 +2,46 @@
     <CThemeProvider>
         <div class="bg-gray">
             <div class="flex flex-wrap lg:mx-20 py-24">
-                <div class="lg:w-2/3 md:w-2/3 lg:mx-0 md:mx-0 mx-5 w-full mb-4">
+                <div class="lg:w-2/3 lg:mx-0 md:mx-0 mx-5 w-full mb-4">
                     <div class="mr-">
                         <h6 class="text-body-2 mb-2">Order</h6>
-                        <div class="bg-white  rounded p-8">
-                            
-                            <c-flex justify-content="space-between" align-items="center" mb="6">
-                                <c-flex align-items="center" width="29%" mr="10px">
+                        <div class="bg-white  rounded p-6"> 
+                            <c-flex flexWrap="wrap" align-items="center" mb="6" v-for="item in cartItems" :key="item.id">
+                                <c-flex align-items="center" :width="['100%','29%']" mr="5px">
                                     <c-box my="auto" bg="white.50" width="52%">
                                         <c-image src="images/shirt.png" size="70px" objectFit="cover" />
                                     </c-box>
 
                                     <c-flex fontSize="11px" my="auto" flexDirection="column">
-                                        <c-text>Air Red Pants</c-text>
-                                        <c-text color="gray.500">Color:</c-text>
-                                        <c-text color="gray.500">Size:</c-text>
+                                        <c-text>{{ item.product.product_name }}</c-text>
+                                        <c-text color="gray.500">Color:{{ item.color }}</c-text>
+                                        <c-text color="gray.500">Size: {{ item.size }}</c-text>
                                     </c-flex>
                                     
                                 </c-flex>
-                                <c-box width="60%" display="flex" align-items="center" justify-content="space-between">
-                                    <c-flex align-items="center" >
+                                <c-box  display="flex"  align-items="center">
+                                    <c-flex align-items="center" width="30%" mr="20">
                                         <c-text text-align="center" fontWeight="500" color="red.200" fontSize="13px" mx="6">
-                                            $90.00
+                                            $0.00
                                         </c-text>
                                         <c-text text-align="center" fontSize="13px" mx="6">
-                                            $500.00
+                                            ${{ item.price }}
                                         </c-text>
                                     </c-flex>
-                                    <c-box width="40%" display="flex" align-items="center">
-                                        <c-text fontSize="13px" mx="6">
-                                            Quantity:
+                                    <c-flex width="50%" align-items="center" >
+                                        <c-text fontSize="13px" mx="6"  width="50%">
+                                            Quantity: {{ item.quantity }}
                                         </c-text>
-                                        <c-number-input :default-value="1" size="sm" :max="30" :min="1" :clamp-value-on-blur="true">
-                                            <c-number-input-field />
-                                            <c-number-input-stepper >
-                                                <c-numberIncrement-stepper />
-                                                <c-number-decrement-stepper />
-                                            </c-number-input-stepper>
-                                        </c-number-input>
-                                    </c-box>
-                                </c-box>
-                                
-                            </c-flex>
-
-                            <c-flex justify-content="space-between" align-items="center" mb="6">
-                                <c-flex align-items="center" width="29%" mr="10px">
-                                    <c-box my="auto" bg="white.50" width="52%">
-                                        <c-image src="images/shirt.png" size="70px" objectFit="cover" />
-                                    </c-box>
-
-                                    <c-flex fontSize="11px" my="auto" flexDirection="column">
-                                        <c-text>Air Red Pants</c-text>
-                                        <c-text color="gray.500">Color:</c-text>
-                                        <c-text color="gray.500">Size:</c-text>
+                                        <c-flex  width="50%">
+                                            <button class="bg-blue px-3 py-1 rounded" :class="{'opacity-70':item.quantity == 1 }" :disabled="item.quantity == 1" @click="reduceQuantity(item.id)">
+                                                <span class="text-white text-h4">&#45;</span>
+                                            </button>
+                                            <button class="bg-blue px-2 rounded ml-3" :class="{'opacity-70':item.quantity == item.product.inStock }" :disabled="item.quantity == item.product.inStock " @click="addQuantity(item.id)">
+                                                <i class="ri-add-line text-h4 text-white"></i>
+                                            </button>
+                                        </c-flex>
+                                       
                                     </c-flex>
-                                    
-                                </c-flex>
-                                <c-box width="60%" display="flex" align-items="center" justify-content="space-between">
-                                    <c-flex align-items="center" >
-                                        <c-text text-align="center" fontWeight="500" color="red.200" fontSize="13px" mx="6">
-                                            $90.00
-                                        </c-text>
-                                        <c-text text-align="center" fontSize="13px" mx="6">
-                                            $500.00
-                                        </c-text>
-                                    </c-flex>
-                                    <c-box width="40%" display="flex" align-items="center">
-                                        <c-text fontSize="13px" mx="6">
-                                            Quantity:
-                                        </c-text>
-                                        <c-number-input :default-value="1" size="sm" :max="30" :min="1" :clamp-value-on-blur="true">
-                                            <c-number-input-field />
-                                            <c-number-input-stepper >
-                                                <c-numberIncrement-stepper />
-                                                <c-number-decrement-stepper />
-                                            </c-number-input-stepper>
-                                        </c-number-input>
-                                    </c-box>
-                                </c-box>
-                                
-                            </c-flex>
-
-                            <c-flex justify-content="space-between" align-items="center" mb="6">
-                                <c-flex align-items="center" width="29%" mr="10px">
-                                    <c-box my="auto" bg="white.50" width="52%">
-                                        <c-image src="images/shirt.png" size="70px" objectFit="cover" />
-                                    </c-box>
-
-                                    <c-flex fontSize="11px" my="auto" flexDirection="column">
-                                        <c-text>Air Red Pants</c-text>
-                                        <c-text color="gray.500">Color:</c-text>
-                                        <c-text color="gray.500">Size:</c-text>
-                                    </c-flex>
-                                    
-                                </c-flex>
-                                <c-box width="60%" display="flex" align-items="center" justify-content="space-between">
-                                    <c-flex align-items="center" >
-                                        <c-text text-align="center" fontWeight="500" color="red.200" fontSize="13px" mx="6">
-                                            $90.00
-                                        </c-text>
-                                        <c-text text-align="center" fontSize="13px" mx="6">
-                                            $500.00
-                                        </c-text>
-                                    </c-flex>
-                                    <c-box width="40%" display="flex" align-items="center">
-                                        <c-text fontSize="13px" mx="6">
-                                            Quantity:
-                                        </c-text>
-                                        <c-number-input :default-value="1" size="sm" :max="30" :min="1" :clamp-value-on-blur="true">
-                                            <c-number-input-field />
-                                            <c-number-input-stepper >
-                                                <c-numberIncrement-stepper />
-                                                <c-number-decrement-stepper />
-                                            </c-number-input-stepper>
-                                        </c-number-input>
-                                    </c-box>
                                 </c-box>
                                 
                             </c-flex>
@@ -124,7 +49,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="lg:w-1/3 md:w-1/3 lg:mx-0 md:mx-0 mx-6 w-full mb-4">
+                <div class="lg:w-1/3  lg:mx-0 md:mx-0 mx-6 w-full mb-4">
                     <div class="lg:ml-5 md:ml-5 ">
                         <h6 class="text-body-2 mb-2">Payment Summary</h6>
                         <div class="bg-white rounded p-6">
@@ -144,7 +69,7 @@
                                         Order Summary
                                     </c-text>
                                     <c-text fontSize="xs" color="gray.400" mb="3">
-                                        $122
+                                        ${{ total }}
                                     </c-text>
                                 </c-flex>
                                 <c-flex justify-content="space-between" mb="3">
@@ -152,7 +77,7 @@
                                         Addtional Service
                                     </c-text>
                                     <c-text fontSize="xs" fontWeight="600" color="blue.200" mb="3">
-                                        $50
+                                        $0
                                     </c-text>
                                 </c-flex>
                                 <c-flex justify-content="space-between" mb="3">
@@ -160,18 +85,18 @@
                                         Total Amount
                                     </c-text>
                                     <c-text fontSize="xs" color="gray.400" mb="3">
-                                        $122
+                                        ${{ total }}
                                     </c-text>
                                 </c-flex>
                                 
                             </c-box>
                             <!-- {{ money | formatNumber}} -->
-                            <c-button mb="3" w="100%" fontSize="13px" variant-color="blue" variant="outline">Checkout</c-button>
+                            <c-button mb="3" w="100%" fontSize="13px" @click="checkout" variant-color="blue" variant="outline">Checkout</c-button>
                         </div>
                     </div> 
                 </div>
             </div>
-        
+    
             <c-modal
             :is-open="isOpen"
             :on-close="close"
@@ -214,6 +139,8 @@ import {
   CInput,
   CStack,
 } from "@chakra-ui/vue";
+import { RepositoryFactory as Repo } from "./../../repository/RepositoryFactory";
+const CY = Repo.get('consultant');
 
 export default {
     components: {
@@ -241,7 +168,11 @@ export default {
     data () {
         return {
             isOpen: false,
-            money:'1000000'
+            money:'1000000',
+            cartItems:{},
+            total:0,
+            error:'',
+            authUser:{}
         }
     },
     filters:{
@@ -249,12 +180,85 @@ export default {
             return new Intl.NumberFormat('en-IN',{ maximumSignificantDigits:3 }).format(value);
         }
     },
+    mounted(){
+        this.getCartItem();
+        this.sum();
+        CY.authUser().then(res => {
+            this.authUser = res.data;
+            // console.log(res);
+        }).catch(err => {
+            this.error = err.response.status
+            // console.log(err.response);
+        })
+    },
     methods: {
+        test(){
+            alert('i am nice');
+        },
         open() {
             this.isOpen = true
         },
         close() {
             this.isOpen = false
+        },
+        sum(){
+            let total = this.cartItems.reduce((item,arr) => {
+                return item+parseInt(arr.price)
+            },0);
+            this.total = total
+            // console.log(total);
+        },
+        addQuantity(id){
+            let index = this.cartItems.map((e) => { return e.id}).indexOf(id);
+
+            if(index !== -1){
+                let co = this.cartItems.forEach((i)=>{
+                    if(i.id == id){
+                      
+                        i.quantity += 1;
+                        i.price = i.product.price*i.quantity;
+                        
+                    }
+                })
+                this.sum();
+                localStorage.setItem('FUM_carts', JSON.stringify(this.cartItems));
+            }
+        },
+        reduceQuantity(id){
+            let index = this.cartItems.map((e) => { return e.id}).indexOf(id);
+
+            if(index !== -1){
+                let co = this.cartItems.forEach((i)=>{
+                    if(i.id == id){
+                        // if(i.quantity === 0) return
+                        
+                        i.quantity -= 1;
+                        i.price -= i.product.price;
+                        
+                        
+                    }
+                })
+                this.sum();
+                localStorage.setItem('FUM_carts', JSON.stringify(this.cartItems));
+            }
+        },
+        getCartItem(){
+            this.cartItems = JSON.parse(localStorage.getItem('FUM_carts'));
+        },
+        checkout(){
+            if(this.authUser && !this.error){
+                //redirect to payment
+                console.log('payment successful')
+            }else {
+                console.log('payment not successful')
+                this.$toast({
+                    position: 'top-right',
+                    title: 'Not authenticated',
+                    description: "You need to sign in or register before you can make any purchase",
+                    status: 'error',
+                    duration: 10000
+                })
+            }
         }
 
     }
