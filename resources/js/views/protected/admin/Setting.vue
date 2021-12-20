@@ -40,7 +40,7 @@
                     <c-text color="gray.500" fontSize="sm" width="md">{{ user.name }}</c-text>
                     <c-text color="gray.500" fontSize="sm" width="md">{{ user.email }}</c-text>
                     <c-text color="gray.500" fontSize="sm" width="md">{{ user.created_at | date }}</c-text>
-                    <c-text color="gray.500" fontSize="sm" width="md">Published</c-text>
+                    <c-text color="gray.500" fontSize="sm" width="md">Member</c-text>
                 </c-flex>
             </c-box>
         </c-box>
@@ -69,7 +69,7 @@ export default {
         async getUsers(){
             try{
                 let response = await CY.test();
-                this.users = response.data.users;
+                this.users = response.users;
             }catch(e){
                 //
             }

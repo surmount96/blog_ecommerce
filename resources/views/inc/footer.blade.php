@@ -1,5 +1,5 @@
 @if(request()->path() != 'shop')
-    <footer class="bg-blue h-64 pt-5">
+    <footer class="bg-blue lg:h-64 md:h-64 pt-5 lg:pb-0 md:pb-1 pb-3">
         <div class="mt-4 w-11/12 mx-auto text-medium text-white">
             <div class="flex flex-wrap">
                 <div class="lg:w-2/6 md:w-1/4 sm:w-1/2 w-full mb-4">
@@ -7,10 +7,9 @@
     {{--                    <img src="elearning/image.svg" alt="">--}}
                         <p class="font-bold text-yellow">{{ config('website.appName') }}</p>
                     </div>
-                    <p>18, Bakare Dawodu Street,Ifako Gbagada, Lagos.</p>
+                    <p>No2 Awodele crescent GRA, Oke Oniti ,Osogbo, Osun State.</p>
                     <p>hello@edubridgeacademy.com</p>
-                    <p>+234 815 121 3474</p>
-                    <p>+234 7045707035</p>
+                    <p>08034137833</p>
                 </div>
                 <div class="lg:w-1/6 md:w-1/4 sm:w-1/2 w-full mb-4">
                     <h4 class=" font-bold mb-6">Employers</h4>

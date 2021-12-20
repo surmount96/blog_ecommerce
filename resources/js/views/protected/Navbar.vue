@@ -38,7 +38,7 @@
                                 <div class="bg-gray h-20 w-20 mx-auto rounded-full flex items-center justify-center">
                                     <i class="ri-user-line text-h4  ri-fw"></i>
                                 </div>
-                                <p class="mt-2 font-bold text-body-2">Ayodeji Let's see, meh</p>
+                                <p class="mt-2 font-bold text-body-2">{{firstname}} Let's see, meh</p>
                                 <p>{{ user.email }}</p>
                             </div>
                         </c-box>
@@ -83,7 +83,8 @@ export default {
     data(){
         return {
             hideText:false,
-            mobile:false
+            mobile:false,
+            firstname:''
         };
     },
     components:{
@@ -101,6 +102,13 @@ export default {
     },
     mounted(){
         if(window.screen.width < 730) return this.mobile = true;
+        this.update()
+    },
+    methods:{
+        update(){
+            this.firstname = this.user.name.split(' ')[0];
+            // console.log(this.firstname)
+        }
     }
 }
 </script>

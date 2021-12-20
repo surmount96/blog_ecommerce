@@ -117,7 +117,7 @@ export default {
         async getProduct(){
             let res = await PD.singleProduct(this.$route.params.id);
            
-            this.product = res.data.product;
+            this.product = res.product;
         },
         
         addCart(data){

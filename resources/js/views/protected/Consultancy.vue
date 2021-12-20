@@ -1,6 +1,49 @@
 <template>
     <div class="">
-        <div class="flex flex-wrap" style="height:85vh">
+        <div class="">
+            <h3 class="mb-3 text-center font-bold">Make an Appointment</h3>
+            <button class="bg-orange py-2 px-4 text-medium text-white rounded mb-2">View session</button>
+            <div class="flex flex-wrap" style="min-height:100vh" >
+                <div class="lg:w-1/4 md:w-1/4 w-full mb-4">
+                    <v-date-picker v-model='date' />
+                    <v-calendar></v-calendar>
+                </div>
+                <div class="lg:w-3/4 md:w-3/4 w-full mb-4">
+                    <div class="shadow-md bg-white border-t border-gray ml-4 px-6 py-12">
+                        <h3 class="text-medium">Doctor details</h3>
+                        <div class="flex items-center justify-between my-4">
+                            <div class="flex items-center">
+                                <div class="h-16 w-16 bg-gray rounded-full mr-2"></div>
+                                <div class="">
+                                    <h3 class="font-bold">Dr. Funmilayo</h3>
+                                    <p class="text-medium text-gray-300">Cardiologist</p>
+                                </div>
+                                
+                            </div>
+                            <button class="bg-orange py-2 px-4 text-medium text-white rounded"  @click="makePayment">Proceed to payment</button>
+                            <!-- <a href="/pay" class="bg-orange py-2 px-4 text-medium text-white rounded" >Proceed to payment</a> -->
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-medium">24th May, availablity</h3>
+                            <div class="flex flex-wrap pt-3 mb-4">
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">09:00 <span class="ml-2">AM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">10:00 <span class="ml-2">AM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">11:00 <span class="ml-2">AM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">12:00 <span class="ml-2">PM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">01:00 <span class="ml-2">PM</span></p>
+                            </div>
+                            <div class="flex flex-wrap pt-3">
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">01:00 <span class="ml-2">PM</span></p>
+                                <p class="border-2 border-green text-green text-medium uppercase px-3 py-1 mr-2">02:00 <span class="ml-2">PM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">03:00 <span class="ml-2">PM</span></p>
+                                <p class="border-2 text-medium uppercase px-3 py-1 mr-2">04:00 <span class="ml-2">PM</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap" style="min-height:85vh">
             <div class="lg:w-3/12 md:w-3/12 w-full">
                 <div class="bg-white rounded-md py-4" style="width:95%">
                     <div class="mx-4 my-3 relative">
@@ -21,6 +64,7 @@
                             <p class=" ">Managing director</p>
                         </div>
                     </div>
+                     
                     <div class="flex items-center bg-white px-4 mb-4 py-2 cursor-pointer" @click="show = !show">
                         <div class="">
                             <div class="h-12 w-12 rounded-full bg-orange"></div>
@@ -31,6 +75,7 @@
                                 <p class="">8:30pm</p>
                             </div>
                             <p class=" ">Developer</p>
+
                         </div>
                     </div>
                 </div>
@@ -77,6 +122,7 @@
                         <div class="absolute top-0 left-0 mt-3 ml-3">
                             <i class="ri-emotion-normal-line text-gray-400 text-large ri-fw"></i>
                         </div>
+                        
                         <div class="">
                             <button class="bg-warning text-white py-3 px-12 flex items-center rounded-full">
                                 send
@@ -91,11 +137,73 @@
 </template>
 
 <script>
+import { RepositoryFactory as Repo } from "./../../repository/RepositoryFactory"
+const CY = Repo.get('consultant');
+
 export default {
     data(){
         return{
-            show:false
+            show:false,
+            session:false,
+            date:new Date(),
+            amount:'3000',
+            user:'',
+            consult:''
         };
     },
+    mounted() {
+        this.updateConsultantPayment();
+        this.authUser();
+    },
+    methods:{
+        authUser(){
+            CY.authUser()
+                .then(res => {
+
+                    this.user = res
+                    this.getSession();
+                })
+        },
+        bookAppointment(){
+            this.$toast({
+                position:'top-right',
+                title: 'Payment successful',
+                description: "Please check your mail for next step",
+                status: 'success',
+                duration: 10000
+            })
+        },
+        updateConsultantPayment(){
+            // console.log(this.$route.query)
+            if(Object.entries(this.$route.query).length !== 0){
+                CY.callback(this.$route.query)
+                    .then(res => {
+                        this.$toast({
+                            position:'top-right',
+                            title: 'Payment successful',
+                            description: "Please check your mail for next step",
+                            status: 'success',
+                            duration: 10000
+                        })
+                        window.location = res.url;
+                    })
+            }
+        },
+        getSession(){
+            
+            CY.session(this.user.id)
+                .then(res => {
+                    this.consult = res;
+                })
+        },
+        makePayment() {
+            
+            CY.payment(this.user)
+                .then(res => {
+                    window.open(res.data.link, '_blank');
+                    // console.log(res)
+                })
+        }
+    }
 }
 </script>

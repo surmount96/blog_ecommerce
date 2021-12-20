@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('base.index');
+    Log::critical('send me this error');
+    // return view('base.index');
 });
 
 Route::get('/notfound',function(){
@@ -26,15 +28,19 @@ Route::get('/services', function () {
 });
 
 Route::view('/about', 'base.about');
-Route::view('/contact', 'base.contact');
+// Route::view('/contact', 'base.contact');
+Route::post('/contact', 'ProfileController@store');
+Route::get('/contact', 'ProfileController@index');
 Route::view('/about', 'base.about');
 
 Route::get('/start-session', function () {
     return view('dashboard.session');
 })->middleware('auth');
 
-Route::get('/blog', function () {
-    return view('base.blog');
+Route::get('/blog', 'Api\PostController@showBlog');
+
+Route::get('/blog/{slug}', function () {
+    return view('base.post.show');
 });
 
 Route::get('/shop', function () {

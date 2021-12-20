@@ -1,6 +1,6 @@
 <template>
     <CThemeProvider>
-        <div class="flex flex-wrap relative bg-gray" style="h">
+        <div class="flex flex-wrap relative bg-gray" >
             <div class="lg:w-3/12 w-3/12 mb-4  relative">
                 <div class=" bg-white mr-5 p-5 fixed left-" style="height:100vh;width:24%;">
                     <h3 class="font-bold text-h4 text-black text-center">Clothing</h3>
@@ -63,8 +63,8 @@
     
                 </div>
 
-                <div class="flex flex-wrap py-8 mb-4" v-show="loading">
-                    <div class="flex items-center w-12 mx-auto h-64">
+                <div class="flex flex-wrap py-8 mb-4" v-show="loading" style="min-height:85vh">
+                    <div class="flex items-center w-12 mx-auto " >
                         <c-spinner color="blue.500" />
                     </div>
                 </div>
@@ -101,7 +101,7 @@ export default {
             this.loading = true;
             try{
                 let response = await PD.allProduct();
-                this.products = response.data.products;
+                this.products = response.products;
                 this.loading = false;
             }catch (e){
                 //

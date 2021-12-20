@@ -23,6 +23,10 @@ Route::group(['middleware' => 'auth:sanctum', 'prefix' => 'admin'], function(){
     Route::get('/products','Api\OrderController@allProduct');
     Route::get('/posts','Api\PostController@index');
     Route::post('/post', 'Api\PostController@store');
+    Route::post('/category', 'Api\OrderController@storeCategory');
+    Route::get('/category', 'Api\OrderController@getCategory');
+    Route::get('/orders', 'Api\OrderController@allOrder');
+    Route::get('/count-order', 'Api\OrderController@countOrder');
     Route::get('/all-users','Api\PostController@registeredUsers');
     Route::get('/saved-users','Api\PostController@users');
 });
@@ -31,6 +35,13 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('/auth-user','Api\UserController@user');
 });
 
+
+Route::post('/pay', 'PaymentController@pay');
+Route::post('/checkout', 'PaymentController@checkout');
+Route::post('/payment/callback', 'PaymentController@callback');
+Route::post('/checkout/callback', 'PaymentController@checkoutCallback');
+Route::get('valid-session', 'PaymentController@getSession');
+Route::patch('update-profile', 'ProfileController@profile');
 
 Route::get('/products', 'Api\OrderController@allProduct');
 Route::get('/product', 'Api\OrderController@show'); 

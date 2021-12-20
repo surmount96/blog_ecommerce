@@ -37,8 +37,8 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
-            'ignore_exceptions' => false,
+            'channels' => ['single','slack'],
+            'ignore_exceptions' => true,
         ],
 
         'single' => [
@@ -57,9 +57,10 @@ return [
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
-            'username' => 'Laravel Log',
+            'username' => 'Fummedicare',
             'emoji' => ':boom:',
-            'level' => 'critical',
+            // 'level' => 'critical',
+            'short' => true
         ],
 
         'papertrail' => [

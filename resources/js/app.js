@@ -38,6 +38,7 @@ import 'remixicon/fonts/remixicon.css';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('modal', require('./components/Modal.vue').default);
+Vue.component('AppNavbar', require('./components/ui/Navbar.vue').default);
 Vue.component('products', require('./views/public/Products.vue').default);
 Vue.component('product-layout', require('./views/public/layout/ProductLayout.vue').default);
 Vue.component('checkout', require('./views/public/Checkout.vue').default);
@@ -56,14 +57,16 @@ const app = new Vue({
             show:false,
             test:false,
             age:true,
-            formData:{
-                email:'ayanwoye74@gmail.com',
-                password:'dimeji22'
-            }
+            mobileNav:false,
+            // formData:{
+            //     email:'ayanwoye74@gmail.com',
+            //     password:'dimeji22'
+            // }
         };
     },
     created(){
         AOS.init();
+        
     },
     methods:{
         handleLogin(){

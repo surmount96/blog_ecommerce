@@ -1,11 +1,14 @@
 <template>
-    <c-box>
+    <c-box minHeight="100vh">
         <c-flex justify-content="space-between" align-items="center" my="5">
             <!-- <c-text fontSize="sm" mx="10" color="blue.200" pb="1" border-bottom="2px" border-color="blue.200">View blog post</c-text>
             <c-text fontSize="sm">Create blog post</c-text> -->
             <c-flex>
                 <c-button  mx="2" bg="white" @click="open" fontSize="11px" px="6" boxShadow="sm" v-show="!order">
                     ADD PRODUCT
+                </c-button>
+                <c-button  mx="2" bg="white" @click="category = true" fontSize="11px" px="6" boxShadow="sm" v-show="!order">
+                    ADD CATEGORY
                 </c-button>
                 <c-button  mx="2" bg="white" fontSize="11px" px="6" boxShadow="sm" @click="manageOrder">
                     <span v-show="order">PRODUCTS</span>
@@ -39,7 +42,7 @@
             
             </c-flex>
             <c-box bg="gray.50"  boxShadow="sm">
-                <c-flex justify-content="space-between" align-items="center" bg="white" mb="4" boxShadow="sm" py="3" px="4">
+                <c-flex justify-content="space-between" align-items="center" bg="white" mb="4" py="3" px="4">
                     <c-text width="200px" textAlign="center">
                         <c-icon name="image" ></c-icon>
                     </c-text>
@@ -51,7 +54,7 @@
                 </c-flex>
                 <c-flex justify-content="space-between" align-items="center" mb="4" py="3" px="4" v-for="product in products" :key="product.id">
                     <c-text width="200px">
-                        <c-image src="/images/shirt.png" size="70px" objectFit="cover" />
+                        <c-image :src="'/storage/product/'+product.cover_image_url" size="70px" objectFit="cover" />
                     </c-text>
                     <c-text color="gray.500" fontSize="sm" width="md">{{ product.product_name }}</c-text>
                     <c-text :color="product.inStock > 1 ? 'green.200' : 'red.200'" fontSize="sm" width="md">{{ product.inStock > 1 ? 'In stock' : 'Out of stock' }}</c-text>
@@ -71,29 +74,29 @@
                     <c-text color="gray.500" fontSize="lg">
                         Recent Orders
                     </c-text>
-                    <c-box my="5" border="1px" border-color="#f1f1f1" rounded="lg">
+                    <c-box my="5" border="1px" border-color="#f1f1f1" rounded="lg" v-for="order in orders" :key="order.id">
                         <c-flex p="3">
                             <c-image src="/images/shirt.png" size="50px" rounded="50%" objectFit="cover" />
                             <c-box ml="3">
                                 <c-flex justify-content="space-between" align-items="center">
                                     <c-text color="gray.500" fontSize="md">
-                                        Ahmad Nazeri
+                                        {{order.user.name}}
                                     </c-text>
                                     <c-text color="gray.300" ml="5" fontSize="xs">
                                         11:23pm
                                     </c-text>
                                 </c-flex>
                                 <c-text color="gray.300" fontSize="sm">
-                                    Spanish gown
+                                    {{order.name}}
                                 </c-text>
                             </c-box>
                         </c-flex>
                         <c-flex justify-content="space-between" mr="4" my="4" p="3">
                             <c-text color="gray.500" fontSize="sm">
-                                Total price
+                                Total price 
                             </c-text>
                             <c-text color="gray.300" fontSize="sm">
-                                NGN 10,000
+                                NGN {{order.price}}
                             </c-text>
                         </c-flex>
                         <c-box textAlign="right" p="3">
@@ -236,9 +239,8 @@
                     <c-form-control mt="4">
                         <c-form-label fontSize="13px">Category</c-form-label>
                         <c-select v-model="form.category_id" placeholder="Select Category" fontSize="11px" border-color="#ccc">
-                            <option value="1">Clothing</option>
-                            <option value="2">Shoe</option>
-                            <option value="3">Chains</option>
+                            <option v-for="category in categories" :key="category.id" :value="category.id">{{ category.name }}</option>
+                            
                         </c-select>
                     </c-form-control>
                     
@@ -248,6 +250,30 @@
                         Close
                     </c-button>
                     <c-button @click="submitLoad" fontSize="sm" fontWeight="light" size="sm">submit</c-button>
+                </c-modal-footer>
+            </c-modal-content>
+            <c-modal-overlay />
+        </c-modal>
+        <c-modal
+        :is-open="category"
+        :on-close="close"
+        :block-scroll-on-mount="blockScrollOnMount"
+        is-centered
+        >
+            <c-modal-content ref="content" >
+                <c-modal-header fontSize="15px">Add Category</c-modal-header>
+                <c-modal-close-button size="sm"/>
+                <c-modal-body>
+                    <c-form-control>
+                        <c-form-label fontSize="13px">Category</c-form-label>
+                        <c-input ref="initialRef" v-model="form.name" placeholder="Category" fontSize="11px" border-color="#ccc"/>
+                    </c-form-control> 
+                </c-modal-body>
+                <c-modal-footer>
+                    <c-button variant-color="blue" mr="3" fontWeight="light" fontSize="sm" size="sm">
+                        Close
+                    </c-button>
+                    <c-button @click="createCategory" fontSize="sm" fontWeight="light" size="sm">submit</c-button>
                 </c-modal-footer>
             </c-modal-content>
             <c-modal-overlay />
@@ -292,10 +318,14 @@ export default {
         return {
             select:'',
             isOpen:false,
+            category:false,
+            categories:{},
+            orders:{},
             order:false,
             blockScrollOnMount: false,
             products:{},
             form: {
+                name:'',
                 price:0,
                 inStock:0,
                 product_name:'',
@@ -308,33 +338,76 @@ export default {
     },
     mounted(){
         this.getProduct();
+        this.getCategory();
+        this.getOrder();
     },
     methods:{
         manageOrder(){
             this.order = !this.order;
         },
         open() {
-            this.isOpen = true
+            this.isOpen = true;
         },
         close() {
-            this.isOpen = false
+            this.isOpen = false;
+            this.category = false;
         },
         uploadImage(e){
-            //
+            this.form.cover_image_url = e.target.files[0];
         },
         async getProduct(){
             try{
                 let response = await CY.getAllProduct();
-                this.products = response.data.products;
+                this.products = response.products;
                 
             }catch(e){
                 console.log(e);
             }
             
         },
-        submitLoad(){
+        async getCategory(){
+            try{
+                let response = await CY.getAllCategory();
+                this.categories = response.categories;
+                
+            }catch(e){
+                console.log(e);
+            }
             
-            CY.createNewProduct(this.form).then(res => {
+        },
+        async getOrder(){
+            try{
+                let response = await CY.orders();
+                this.orders = response.orders;
+                
+            }catch(e){
+                console.log(e);
+            }
+            
+        },
+        createCategory(){
+            CY.createCategory(this.form)
+                .then(res => {
+                    this.form = {};
+                    this.getCategory();
+                    this.$toast({
+                        position: 'top-right',
+                        description: "Category created",
+                        status: 'success',
+                        duration: 5000
+                    })
+                })
+        },
+        submitLoad(){
+            let fd = new FormData();
+            fd.append('price', this.form.price);
+            fd.append('inStock', this.form.inStock);
+            fd.append('product_name', this.form.product_name);
+            fd.append('size', this.form.size);
+            fd.append('color', this.form.color);
+            fd.append('category_id', this.form.category_id);
+            fd.append('cover_image_url', this.form.cover_image_url);
+            CY.createNewProduct(fd).then(res => {
                 this.showToast();
                 this.form = {};
                 this.getProduct();
@@ -344,7 +417,7 @@ export default {
         showToast() {
             this.$toast({
                 title: 'Product created.',
-                description: "your product has been added.",
+                description: "Your product has been added.",
                 status: 'success',
                 duration: 5000
             })

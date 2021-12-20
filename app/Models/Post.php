@@ -11,6 +11,7 @@ class Post extends Model
         'body',
         'image',
         'video',
-        'slug'
+        'slug',
+        'category'
     ];
 }

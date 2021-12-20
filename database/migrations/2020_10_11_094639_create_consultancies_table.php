@@ -17,6 +17,9 @@ class CreateConsultanciesTable extends Migration
             $table->id();
             $table->uuid('user_id');
             $table->string('payment_status');
+            $table->string('transaction_id');
+            $table->string('tx_ref');
+            $table->string('isApproved')->default('pending');
             $table->timestamps();
         });
     }

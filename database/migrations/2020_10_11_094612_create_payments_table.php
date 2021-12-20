@@ -15,8 +15,12 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('payment_type');
-            $table->double('amount',12,2);
+            $table->string('type')->default('item');
+            $table->string('tx_ref');
+            $table->string('transaction_id');
+            $table->string('status');
+            $table->unsignedInteger('order_id');
+            
             $table->timestamps();
         });
     }

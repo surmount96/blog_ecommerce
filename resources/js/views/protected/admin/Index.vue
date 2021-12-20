@@ -1,7 +1,7 @@
 <template>
     <div>
         <c-flex>
-            <c-box width="80%">
+            <c-box width="100%">
                 <c-flex mx="10" justify-content="space-between">
                     <c-box width="md" bg="orange.500" rounded="md"  boxShadow="md" height="15vh" p="3" mr="10">
                         <c-text color="white" fontSize="sm">
@@ -16,7 +16,7 @@
                             Pending orders
                         </c-text>
                         <c-text color="white" fontSize="40px">
-                           10
+                           {{ order }}
                         </c-text>
                     </c-box>
                     <c-box width="md" boxShadow="md" bg="blue.500" rounded="md" height="15vh" p="3" >
@@ -76,7 +76,7 @@
                     </c-flex>
                 </c-box>
             </c-box>
-            <c-box width="20%">
+            <!-- <c-box width="20%">
                 <c-box bg="gray.200" rounded="lg" height="100px" py="4" px="1">
                     <div class="flex items-center bg-gray px-1 mb-4 py-2 cursor-pointer">
                         <div class="">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </c-box>
-            </c-box>
+            </c-box> -->
         </c-flex>
         
     </div>
@@ -110,6 +110,7 @@ export default {
         return {
             select:'',
             userCount:'',
+            order:'',
             attrs: [
                 {
                 key: 'today',
@@ -121,13 +122,20 @@ export default {
     },
     mounted(){
         this.getAllUsers();
+        this.getOrder();
     },
     methods:{
         async getAllUsers(){
             let response = await CY.allUsers();
-            this.userCount = response.data;
+            this.userCount = response;
             console.log(response)
         },
+        getOrder(){
+            CY.count()
+                .then(res => {
+                    this.order = res;
+                })
+        }
     },
 }
 </script>
